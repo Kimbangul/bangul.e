@@ -1,0 +1,225 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: inherit; }
+
+a,
+img {
+  display: block; }
+
+@keyframes main-ani {
+  0% {
+    opacity: 0.2; }
+  100% {
+    opacity: 1; } }
+@keyframes fade-up {
+  0% {
+    opacity: 0;
+    margin-top: 30px; }
+  20% {
+    opacity: 0;
+    margin-top: 30px; }
+  40% {
+    opacity: 1;
+    margin-top: 0px; }
+  100% {
+    opacity: 1;
+    margin-top: 0px; } }
+.img-box img {
+  width: 100%; }
+
+.flex {
+  display: flex; }
+
+.flex-ai-c {
+  align-items: center; }
+
+.flex-jc-c {
+  justify-content: center; }
+
+.flex-jc-a {
+  justify-content: space-around; }
+
+.flex-jc-b {
+  justify-content: space-between; }
+
+.flex-d-c {
+  flex-direction: column; }
+
+.flex-1-0-0 {
+  flex: 1 0 0; }
+
+.no-drag {
+  user-select: none; }
+
+html,
+body {
+  font-size: 10px;
+  font-family: 'Open Sans', 'Noto Sans CJK KR', sans-serif; }
+
+#main-header {
+  width: 100%;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  padding: 40px 50px;
+  color: #fff;
+  font-size: 2em; }
+  #main-header > div.logo {
+    font-weight: 900; }
+  #main-header > ul.sns > li > a {
+    font-size: 0.8em;
+    padding: 0 10px;
+    opacity: 0.7;
+    transition: opacity 0.3s; }
+    #main-header > ul.sns > li > a:hover {
+      opacity: 1; }
+
+#video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: 0;
+  overflow: hidden; }
+
+#main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden; }
+  #main > div.fp-tableCell div.con {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    animation: main-ani 1s ease-in-out 0.5s 1 alternate both; }
+    #main > div.fp-tableCell div.con > div.main-img {
+      position: relative;
+      width: 30%;
+      min-width: 600px;
+      height: auto;
+      z-index: 3;
+      opacity: 1;
+      transition: min-width 0.3s, opacity 0.5s; }
+      #main > div.fp-tableCell div.con > div.main-img:hover {
+        opacity: 0.4; }
+      #main > div.fp-tableCell div.con > div.main-img > img {
+        position: relative; }
+    #main > div.fp-tableCell div.con > div.title {
+      font-size: 7.5em;
+      letter-spacing: 0.07em;
+      font-style: italic;
+      color: #fff;
+      white-space: nowrap;
+      opacity: 1;
+      transition: font-size 0.3s, opacity 0.5s; }
+      #main > div.fp-tableCell div.con > div.title > h1 {
+        font-weight: 900;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 47%;
+        transform: translateX(-50%) translateY(0%);
+        visibility: hidden; }
+        #main > div.fp-tableCell div.con > div.title > h1 > span.visible {
+          visibility: visible; }
+        #main > div.fp-tableCell div.con > div.title > h1.title-front {
+          z-index: 4;
+          animation: fade-up 3s ease-in-out 1.5s 1 alternate both; }
+        #main > div.fp-tableCell div.con > div.title > h1.title-back {
+          left: 52%;
+          z-index: 1;
+          animation: fade-up 3s ease-in-out 2s 1 alternate both; }
+      #main > div.fp-tableCell div.con > div.title > h2 {
+        font-size: 0.2em;
+        font-weight: 600;
+        letter-spacing: 1.5em;
+        position: absolute;
+        z-index: 4;
+        top: 65%;
+        left: 50%;
+        transform: translateX(-50%) translateY(0%);
+        animation: fade-up 5s ease-in-out 2.5s 1 alternate both; }
+
+@media (max-width: 1080px) {
+  #main > div.fp-tableCell div.con > div.main-img {
+    min-width: 480px; }
+  #main > div.fp-tableCell div.con > div.title {
+    font-size: 6em;
+    letter-spacing: 0.07em; }
+    #main > div.fp-tableCell div.con > div.title > h1 {
+      top: 50%;
+      left: 47%;
+      transform: translateX(-50%) translateY(0%); }
+      #main > div.fp-tableCell div.con > div.title > h1.title-back {
+        left: 52%; }
+    #main > div.fp-tableCell div.con > div.title > h2 {
+      font-size: 0.19em;
+      letter-spacing: 1.5em;
+      top: 63%;
+      left: 50%;
+      transform: translateX(-50%) translateY(0%); } }
+@media (max-width: 720px) {
+  #main > div.fp-tableCell div.con > div.main-img {
+    min-width: 320px; }
+  #main > div.fp-tableCell div.con > div.title {
+    font-size: 5em;
+    letter-spacing: 0.07em; }
+    #main > div.fp-tableCell div.con > div.title > h1 {
+      top: 50%;
+      left: 47%;
+      transform: translateX(-50%) translateY(0%); }
+      #main > div.fp-tableCell div.con > div.title > h1.title-back {
+        left: 52%; }
+    #main > div.fp-tableCell div.con > div.title > h2 {
+      font-size: 0.19em;
+      letter-spacing: 1.5em;
+      top: 63%;
+      left: 50%;
+      transform: translateX(-50%) translateY(0%); } }
+@media (max-width: 500px) {
+  #main > div.fp-tableCell div.con > div.main-img {
+    min-width: 280px; }
+  #main > div.fp-tableCell div.con > div.title {
+    font-size: 4em;
+    letter-spacing: 0.07em; }
+    #main > div.fp-tableCell div.con > div.title > h1 {
+      top: 50%;
+      left: 47%;
+      transform: translateX(-50%) translateY(0%); }
+      #main > div.fp-tableCell div.con > div.title > h1.title-back {
+        left: 52%; }
+    #main > div.fp-tableCell div.con > div.title > h2 {
+      font-size: 0.15em;
+      letter-spacing: 1.5em;
+      top: 63%;
+      left: 50%;
+      transform: translateX(-50%) translateY(0%); } }
+@media (max-width: 450px) {
+  #main > div.fp-tableCell div.con > div.main-img {
+    min-width: 250px; }
+  #main > div.fp-tableCell div.con > div.title {
+    font-size: 3.5em;
+    letter-spacing: 0.07em; }
+    #main > div.fp-tableCell div.con > div.title > h1 {
+      top: 50%;
+      left: 47%;
+      transform: translateX(-50%) translateY(0%); }
+      #main > div.fp-tableCell div.con > div.title > h1.title-back {
+        left: 52%; }
+    #main > div.fp-tableCell div.con > div.title > h2 {
+      font-size: 0.15em;
+      letter-spacing: 1.5em;
+      top: 63%;
+      left: 50%;
+      transform: translateX(-50%) translateY(0%); } }
+
+/*# sourceMappingURL=style.css.map */
