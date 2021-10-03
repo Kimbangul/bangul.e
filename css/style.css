@@ -129,7 +129,7 @@ img {
 
 .section-title {
   font-weight: 900;
-  font-size: 12em;
+  font-size: 8em;
   font-style: italic;
   position: absolute;
   right: 50px;
@@ -143,7 +143,7 @@ img {
     position: absolute;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    top: -100px;
+    top: -70px;
     opacity: 0.4; }
   .section-title::before {
     content: attr(data-section-title);
@@ -151,7 +151,7 @@ img {
     position: absolute;
     color: transparent;
     -webkit-text-stroke: 1px #fff;
-    top: -200px;
+    top: -140px;
     opacity: 0.3; }
 
 .bold {
@@ -299,6 +299,25 @@ body {
         -webkit-animation: fade-up 5s ease-in-out 2.5s 1 alternate both;
                 animation: fade-up 5s ease-in-out 2.5s 1 alternate both; }
 
+#about-me div.con > div.text-box > .pr {
+  font-size: 3em; }
+  #about-me div.con > div.text-box > .pr > .bold {
+    font-size: 1.2em; }
+#about-me div.con > div.text-box > div.introduction {
+  margin-top: 50px;
+  font-weight: 300; }
+  #about-me div.con > div.text-box > div.introduction > p {
+    font-size: 1.6em;
+    margin-bottom: 50px; }
+  #about-me div.con > div.text-box > div.introduction > ul.career-list {
+    font-size: 1.4em; }
+    #about-me div.con > div.text-box > div.introduction > ul.career-list > li {
+      margin: 10px 0;
+      list-style: disc; }
+      #about-me div.con > div.text-box > div.introduction > ul.career-list > li::before {
+        content: "";
+        display: inline-block; }
+
 #skills div.con > div.text-box {
   margin-top: 50px; }
   #skills div.con > div.text-box > p {
@@ -328,7 +347,7 @@ body {
         top: 0; }
       #skills div.con > div.text-box > ul.skill-description > li > span {
         font-size: 1.25em;
-        color: #FF4996; }
+        color: #FF4646; }
       #skills div.con > div.text-box > ul.skill-description > li:nth-child(2n) > span {
         color: #49FFA8; }
 #skills div.con > div.skill-list {
@@ -418,6 +437,69 @@ body {
           animation: name duration timing-function delay iteration-count direction fill-mode;
   -webkit-animation: icon-jump 0.4s ease-out 12.8s 1 both;
           animation: icon-jump 0.4s ease-out 12.8s 1 both; }
+
+#work .con > ul.site-list > li > div.img-box {
+  max-width: 500px;
+  padding: 20px;
+  margin-left: 30px; }
+#work .con > ul.site-list > li > div.text-box {
+  margin-left: 100px; }
+  #work .con > ul.site-list > li > div.text-box > .title-con {
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end; }
+    #work .con > ul.site-list > li > div.text-box > .title-con > h3.site-title {
+      font-size: 4em;
+      font-weight: 700;
+      font-style: italic; }
+    #work .con > ul.site-list > li > div.text-box > .title-con > .sub-title {
+      font-size: 1.8em;
+      font-weight: 400;
+      margin: 15px 0; }
+  #work .con > ul.site-list > li > div.text-box > .tag-list {
+    margin: 35px 0 35px 0; }
+    #work .con > ul.site-list > li > div.text-box > .tag-list > li {
+      display: inline-block;
+      font-size: 1.3em;
+      font-weight: 700;
+      padding: 4px 10px;
+      margin-right: 10px;
+      border-radius: 6px;
+      border: 1px solid #fff;
+      opacity: 0.7; }
+  #work .con > ul.site-list > li > div.text-box > p {
+    font-size: 1.4em; }
+  #work .con > ul.site-list > li > div.text-box > .link-box {
+    margin: 50px 0; }
+    #work .con > ul.site-list > li > div.text-box > .link-box > a {
+      width: 150px;
+      height: 40px;
+      font-size: 1.6em;
+      font-weight: 900;
+      margin-right: 20px;
+      border: 2px solid #FF4646;
+      color: #FF4646;
+      border-radius: 7px;
+      color: #FF4646;
+      -webkit-transform: scale(1);
+              transform: scale(1);
+      -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
+      transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
+      transition: transform 0.3s, background 0.3s, color 0.3s;
+      transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s; }
+      #work .con > ul.site-list > li > div.text-box > .link-box > a:nth-child(2n) {
+        border: 2px solid #49FFA8;
+        color: #49FFA8; }
+        #work .con > ul.site-list > li > div.text-box > .link-box > a:nth-child(2n):hover {
+          background-color: #49FFA8; }
+      #work .con > ul.site-list > li > div.text-box > .link-box > a:hover {
+        -webkit-transform: scale(0.9);
+                transform: scale(0.9);
+        color: #030303;
+        background-color: #FF4646; }
+#work.active .con > ul.site-list {
+  -webkit-animation: fade-up-transform 3s ease-in-out 0s 1 alternate both;
+          animation: fade-up-transform 3s ease-in-out 0s 1 alternate both; }
 
 @media (max-width: 1080px) {
   #main > div.fp-tableCell div.con > div.main-img {

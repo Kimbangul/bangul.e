@@ -3,7 +3,7 @@
 
 // lib
 $max-width: 1200px;
-$point-color-pink: #FF4996;
+$point-color-pink: #FF4646;
 $point-color-blue: #49FFA8;
 $point-color-yellow: #FCFF52;
 
@@ -130,7 +130,7 @@ img {
 
 .section-title{
     font-weight: 900;
-    font-size: 12em;
+    font-size: 8em;
     font-style: italic;
     position: absolute;
     right: 50px;
@@ -144,13 +144,9 @@ img {
         position: absolute;
         color: transparent;
         -webkit-text-stroke: 1px #fff;
-        top: -100px;
+        top: -70px;
         opacity: 0.4;
-        // text-shadow:
-        // -1px -1px 0 #fff,
-        // 1px -1px 0 #fff,
-        // -1px 1px 0 #fff,
-        // 1px 1px 0 #fff;  
+
     }
     &::before{
         content: attr(data-section-title);
@@ -158,13 +154,9 @@ img {
         position: absolute;
         color: transparent;
         -webkit-text-stroke: 1px #fff;
-        top: -200px;
+        top: -140px;
         opacity: 0.3;
-        // text-shadow:
-        // -1px -1px 0 #fff,
-        // 1px -1px 0 #fff,
-        // -1px 1px 0 #fff,
-        // 1px 1px 0 #fff;  
+
     }
 }
 
@@ -401,7 +393,38 @@ body {
 
 // about me start
 #about-me{
-    
+    & div.con{
+        & > div.text-box{
+            & > .pr{
+                font-size: 3em;
+                & > .bold{
+                    font-size: 1.2em;
+                }
+            }
+
+            & > div.introduction{
+                margin-top: 50px;
+                
+                font-weight: 300;
+                & > p{
+                    font-size: 1.6em;
+                    margin-bottom: 50px;
+                }
+                & > ul.career-list{
+                    font-size: 1.4em;
+                    & > li{
+                        margin: 10px 0;
+                        list-style:disc;
+                        &::before{
+                            content:"";
+                            display: inline-block;
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
 }
 // about me end
 
@@ -518,6 +541,112 @@ body {
 }
 
 // skills end
+
+// work start
+
+#work{
+
+    & .con{
+        & > ul.site-list{
+            
+            & > li {
+                & > div.img-box{
+                    max-width: 500px;
+                    padding: 20px;
+                    margin-left: 30px;
+                }
+
+                & > div.text-box{
+                    margin-left: 100px;
+                    
+                    & > .title-con{
+                        align-items: end;                       
+                        & > h3.site-title{
+                            font-size: 4em;
+                            font-weight: 700;
+                            font-style: italic;
+                            // margin-right: 20px;
+                        }
+    
+                        & > .sub-title{
+                            font-size: 1.8em;
+                            font-weight: 400;   
+                            margin: 15px 0;                        
+                        }
+                    }
+
+                    & > .tag-list{    
+                        margin: 35px 0 35px 0;                    
+                        & > li{
+                            display: inline-block;
+                            font-size: 1.3em;    
+                            font-weight: 700;                       
+                            padding: 4px 10px;
+                            margin-right: 10px;
+                            border-radius: 6px;
+                            border: 1px solid #fff;
+                            opacity: 0.7;
+                            // color: #030303;
+                            
+                        }
+                    }
+
+                    & > p{
+                       
+                        font-size: 1.4em;
+                    }
+
+                    & > .link-box{
+                        margin: 50px 0;
+                        & > a{
+                        width: 150px;
+                        height: 40px;
+                        font-size: 1.6em;
+                        font-weight: 900;
+                        margin-right: 20px;      
+                        border: 2px solid $point-color-pink; 
+                        color: $point-color-pink;
+                        border-radius: 7px;                 
+                        // background-color: $point-color-pink;
+                        color: $point-color-pink;
+                        // color: #030303;
+                        transform: scale(1);
+                        transition: transform 0.3s, background 0.3s, color 0.3s;
+
+                        &:nth-child(2n){
+                        border: 2px solid $point-color-blue; 
+                        color: $point-color-blue;
+                        // background-color: $point-color-blue;\
+                        &:hover{                      
+                            background-color: $point-color-blue;
+                        }
+                    }
+
+                        &:hover{
+                            transform: scale(0.9);
+                            color: #030303;
+                            background-color: $point-color-pink;
+                        }
+                        }
+
+                    }
+                }
+            }
+
+            
+        }
+    }
+
+    &.active{
+        & .con{
+            & > ul.site-list{
+                animation: fade-up-transform 3s ease-in-out 0s 1 alternate both;
+            }
+        }
+    }
+}
+
+// work end
 
 // responsive start
 

@@ -7,8 +7,9 @@ $(document).ready(function() {
             autoScrolling: true,
             navigation: true,
             navigationPosition: 'left',
-            navigationTooltips: ['main', 'about me','skills'],
-            showActiveTooltip: true                 
+            navigationTooltips: ['main', 'about me','skills','work'],
+            showActiveTooltip: true,
+            scrollingSpeed: 1000,                 
         });
 
     }
