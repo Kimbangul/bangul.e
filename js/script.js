@@ -7,7 +7,7 @@ $(document).ready(function() {
             autoScrolling: true,
             navigation: true,
             navigationPosition: 'left',
-            navigationTooltips: ['main', 'about me'],
+            navigationTooltips: ['main', 'about me','skills'],
             showActiveTooltip: true                 
         });
 
