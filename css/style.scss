@@ -1,5 +1,33 @@
 @charset "utf-8";
 
+// @font-face {
+//     font-family: 'SpoqaHanSansNeo-Light';
+//     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Light.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'SpoqaHanSansNeo-Regular';
+//     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Regular.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'SpoqaHanSansNeo-Medium';
+//     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Medium.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+// @font-face {
+//     font-family: 'SpoqaHanSansNeo-Bold';
+//     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SpoqaHanSansNeo-Bold.woff') format('woff');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
 
 // lib
 $max-width: 1200px;
@@ -109,19 +137,19 @@ img {
 
 @keyframes prev-ani{
     0%{
-        transform: translateX(0);
+        transform: translateX(-10px);
     }
     100%{
-        transform: translateX(-10px);
+        transform: translateX(-20px);
     }
 }
 
 @keyframes next-ani{
     0%{
-        transform: translateX(0);
+        transform: translateX(10px);
     }
     100%{
-        transform: translateX(10px);
+        transform: translateX(20px);
     }
 }
 
@@ -150,6 +178,15 @@ img {
 
 // lib start
 
+@mixin link-btn{
+    width: 150px;
+    height: 40px;
+    font-size: 1.6em;
+    border-radius: 7px;
+    transform: scale(1);
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+}
+
 .con{
     max-width: $max-width;
     margin: 0 auto;
@@ -163,6 +200,10 @@ img {
 
 .icon{
     display: inline-block;
+}
+
+.underline{
+    text-decoration: underline;
 }
 
 .normal{
@@ -244,11 +285,30 @@ img {
 
 // custom start
 
+// fp start
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span{
+    background: #fff;
+    opacity: 0.5;
+}
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span{
+    background: $point-color-pink;
+    opacity: 1;
+}
+
+#fp-nav ul li .fp-tooltip{
+    color: $point-color-pink;
+    font-weight: 600;
+}
+
+// fp end
+
 html,
 body {
     font-size: 10px;
     // min-width: 1920px;
-    font-family: 'Open Sans', 'Noto Sans CJK KR', sans-serif;
+    font-family: 'Open Sans','Noto Sans CJK KR', sans-serif;
     background: #030303; 
     color: #F5F5F5;
 }
@@ -489,7 +549,7 @@ body {
             }           
 
             & > ul.skill-description{
-                font-size: 1.4em;
+                font-size: 1.5em;
                 font-weight: normal;
                 margin-left: 35px;
                 
@@ -507,7 +567,14 @@ body {
                         top: 0;
                         
                     }
-                   & > span{
+
+                    & > a{
+                       &:hover{
+                            animation: up-down-ani 0.7s ease-in-out 0s infinite alternate both;
+                       }
+                    }
+
+                   & span{
                     //  포인트 컬러
                         font-size: 1.25em;
                         color: $point-color-pink;
@@ -588,6 +655,7 @@ body {
     
     & .con{
         position: relative;
+        margin-bottom: 10px;
         & div.slide{
             & .work {
                 & > div.img-box{
@@ -597,7 +665,8 @@ body {
                 }
 
                 & > div.text-box{
-                    margin-left: 100px;
+                    margin-left: 70px;
+                    padding-right: 20px;
                     
                     & > .title-con{
                         align-items: end;                       
@@ -606,6 +675,7 @@ body {
                             font-weight: 700;
                             font-style: italic;
                             // margin-right: 20px;
+                            line-height: 1.3em;
                         }
     
                         & > .sub-title{
@@ -616,7 +686,7 @@ body {
                     }
 
                     & > .tag-list{    
-                        margin: 35px 0 35px 0;                    
+                        margin: 20px 0 35px 0;                    
                         & > li{
                             display: inline-block;
                             font-size: 1.3em;    
@@ -633,25 +703,22 @@ body {
 
                     & > p{
                        
-                        font-size: 1.4em;
+                        font-size: 1.6em;
+                        line-height: 1.8em;
                     }
 
                     & > .link-box{
                         margin: 50px 0;
-                        & > a{
-                        width: 150px;
-                        height: 40px;
-                        font-size: 1.6em;
+                        & > a{    
+                        @include link-btn();                  
                         font-weight: 900;
                         margin-right: 20px;      
                         border: 2px solid $point-color-pink; 
-                        color: $point-color-pink;
-                        border-radius: 7px;                 
+                        color: $point-color-pink;                                   
                         // background-color: $point-color-pink;
                         color: $point-color-pink;
-                        // color: #030303;
-                        transform: scale(1);
-                        transition: transform 0.3s, background 0.3s, color 0.3s;
+                        // color: #030303;                       
+                      
 
                         &:nth-child(2n){
                         border: 2px solid $point-color-blue; 
@@ -872,6 +939,53 @@ body {
 }
 
 // design end
+// contact start
+#contact{
+    & div.con{
+        & > div.text-box{
+            & > p{
+                font-size: 1.6em;
+                margin-bottom: 20px;
+                font-weight: 200;
+                line-height: 1.8em;
+
+                &:first-child{
+                    font-size: 3.6em;
+                    line-height: 1.2em;
+                    font-weight: 700;
+                    font-style: italic;
+                    margin-bottom: 50px;
+                }
+
+                & > span.bold{
+                    color: $point-color-blue;
+                    &:nth-of-type(2){
+                        color: $point-color-yellow;
+                    }
+                }
+            }
+
+            & > div.link-box{
+                // link btn
+                margin-top: 70px;
+                & > a{
+                    @include link-btn();
+                    margin-right: 20px;
+                    border: 2px solid $point-color-pink;
+
+                    & > i{
+                        margin-right: 10px;
+                    }
+                }
+                
+            }
+        }
+
+        
+    }
+}
+// contact end
+
 // responsive start
 
 @media(max-width: 1080px) {

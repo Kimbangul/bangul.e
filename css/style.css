@@ -119,32 +119,32 @@ img {
             transform: translateY(0); } }
 @-webkit-keyframes prev-ani {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
-  100% {
     -webkit-transform: translateX(-10px);
-            transform: translateX(-10px); } }
+            transform: translateX(-10px); }
+  100% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); } }
 @keyframes prev-ani {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
-  100% {
     -webkit-transform: translateX(-10px);
-            transform: translateX(-10px); } }
+            transform: translateX(-10px); }
+  100% {
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px); } }
 @-webkit-keyframes next-ani {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
-  100% {
     -webkit-transform: translateX(10px);
-            transform: translateX(10px); } }
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); } }
 @keyframes next-ani {
   0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0); }
-  100% {
     -webkit-transform: translateX(10px);
-            transform: translateX(10px); } }
+            transform: translateX(10px); }
+  100% {
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px); } }
 @-webkit-keyframes gallery-ani {
   0% {
     -webkit-transform: scale(0);
@@ -188,6 +188,9 @@ img {
 
 .icon {
   display: inline-block; }
+
+.underline {
+  text-decoration: underline; }
 
 .normal {
   font-style: normal !important; }
@@ -263,10 +266,22 @@ img {
       -ms-user-select: none;
           user-select: none; }
 
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: #fff;
+  opacity: 0.5; }
+
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+  background: #FF4646;
+  opacity: 1; }
+
+#fp-nav ul li .fp-tooltip {
+  color: #FF4646;
+  font-weight: 600; }
+
 html,
 body {
   font-size: 10px;
-  font-family: 'Open Sans', 'Noto Sans CJK KR', sans-serif;
+  font-family: 'Open Sans','Noto Sans CJK KR', sans-serif;
   background: #030303;
   color: #F5F5F5; }
 
@@ -395,7 +410,7 @@ body {
       -webkit-animation: icon-rotate 0.7s ease-in-out 0s infinite alternate both;
               animation: icon-rotate 0.7s ease-in-out 0s infinite alternate both; }
   #skills div.con > div.text-box > ul.skill-description {
-    font-size: 1.4em;
+    font-size: 1.5em;
     font-weight: normal;
     margin-left: 35px; }
     #skills div.con > div.text-box > ul.skill-description > li {
@@ -409,7 +424,10 @@ body {
         position: absolute;
         left: -35px;
         top: 0; }
-      #skills div.con > div.text-box > ul.skill-description > li > span {
+      #skills div.con > div.text-box > ul.skill-description > li > a:hover {
+        -webkit-animation: up-down-ani 0.7s ease-in-out 0s infinite alternate both;
+                animation: up-down-ani 0.7s ease-in-out 0s infinite alternate both; }
+      #skills div.con > div.text-box > ul.skill-description > li span {
         font-size: 1.25em;
         color: #FF4646; }
       #skills div.con > div.text-box > ul.skill-description > li:nth-child(2n) > span {
@@ -503,13 +521,15 @@ body {
           animation: icon-jump 0.4s ease-out 12.8s 1 both; }
 
 #work .con {
-  position: relative; }
+  position: relative;
+  margin-bottom: 10px; }
   #work .con div.slide .work > div.img-box {
     max-width: 500px;
     padding: 20px;
     margin-left: 30px; }
   #work .con div.slide .work > div.text-box {
-    margin-left: 100px; }
+    margin-left: 70px;
+    padding-right: 20px; }
     #work .con div.slide .work > div.text-box > .title-con {
       -webkit-box-align: end;
           -ms-flex-align: end;
@@ -517,13 +537,14 @@ body {
       #work .con div.slide .work > div.text-box > .title-con > h3.site-title {
         font-size: 4em;
         font-weight: 700;
-        font-style: italic; }
+        font-style: italic;
+        line-height: 1.3em; }
       #work .con div.slide .work > div.text-box > .title-con > .sub-title {
         font-size: 1.8em;
         font-weight: 400;
         margin: 15px 0; }
     #work .con div.slide .work > div.text-box > .tag-list {
-      margin: 35px 0 35px 0; }
+      margin: 20px 0 35px 0; }
       #work .con div.slide .work > div.text-box > .tag-list > li {
         display: inline-block;
         font-size: 1.3em;
@@ -534,25 +555,26 @@ body {
         border: 1px solid #fff;
         opacity: 0.7; }
     #work .con div.slide .work > div.text-box > p {
-      font-size: 1.4em; }
+      font-size: 1.6em;
+      line-height: 1.8em; }
     #work .con div.slide .work > div.text-box > .link-box {
       margin: 50px 0; }
       #work .con div.slide .work > div.text-box > .link-box > a {
         width: 150px;
         height: 40px;
         font-size: 1.6em;
-        font-weight: 900;
-        margin-right: 20px;
-        border: 2px solid #FF4646;
-        color: #FF4646;
         border-radius: 7px;
-        color: #FF4646;
         -webkit-transform: scale(1);
                 transform: scale(1);
         -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
         transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
         transition: transform 0.3s, background 0.3s, color 0.3s;
-        transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s; }
+        transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
+        font-weight: 900;
+        margin-right: 20px;
+        border: 2px solid #FF4646;
+        color: #FF4646;
+        color: #FF4646; }
         #work .con div.slide .work > div.text-box > .link-box > a:nth-child(2n) {
           border: 2px solid #49FFA8;
           color: #49FFA8; }
@@ -668,6 +690,39 @@ body {
 #design.active div.con > ul.gallery > li:nth-child(8) {
   -webkit-animation: gallery-ani 0.3s ease-in-out 1.2s 1 both;
           animation: gallery-ani 0.3s ease-in-out 1.2s 1 both; }
+
+#contact div.con > div.text-box > p {
+  font-size: 1.6em;
+  margin-bottom: 20px;
+  font-weight: 200;
+  line-height: 1.8em; }
+  #contact div.con > div.text-box > p:first-child {
+    font-size: 3.6em;
+    line-height: 1.2em;
+    font-weight: 700;
+    font-style: italic;
+    margin-bottom: 50px; }
+  #contact div.con > div.text-box > p > span.bold {
+    color: #49FFA8; }
+    #contact div.con > div.text-box > p > span.bold:nth-of-type(2) {
+      color: #FCFF52; }
+#contact div.con > div.text-box > div.link-box {
+  margin-top: 70px; }
+  #contact div.con > div.text-box > div.link-box > a {
+    width: 150px;
+    height: 40px;
+    font-size: 1.6em;
+    border-radius: 7px;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
+    transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, background 0.3s, color 0.3s;
+    transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
+    margin-right: 20px;
+    border: 2px solid #FF4646; }
+    #contact div.con > div.text-box > div.link-box > a > i {
+      margin-right: 10px; }
 
 @media (max-width: 1080px) {
   #main > div.fp-tableCell div.con > div.main-img {

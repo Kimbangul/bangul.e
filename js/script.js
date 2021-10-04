@@ -7,9 +7,10 @@ $(document).ready(function() {
             autoScrolling: true,
             navigation: true,
             navigationPosition: 'left',
-            navigationTooltips: ['main', 'about me','skills','work', 'design'],
+            navigationTooltips: ['main', 'about me','skills','work', 'design', 'contact'],
             showActiveTooltip: true,
-            scrollingSpeed: 1000,                 
+            scrollingSpeed: 1000,  
+            scrollOverflow: true               
         });
 
     }
