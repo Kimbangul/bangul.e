@@ -117,6 +117,68 @@ img {
   100% {
     -webkit-transform: translateY(0);
             transform: translateY(0); } }
+@-webkit-keyframes prev-ani {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); } }
+@keyframes prev-ani {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px); } }
+@-webkit-keyframes next-ani {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); } }
+@keyframes next-ani {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0); }
+  100% {
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px); } }
+@-webkit-keyframes gallery-ani {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  70% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@keyframes gallery-ani {
+  0% {
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+  70% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1); }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1); } }
+@-webkit-keyframes up-down-ani {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); } }
+@keyframes up-down-ani {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0); }
+  100% {
+    -webkit-transform: translateY(10px);
+            transform: translateY(10px); } }
 .con {
   max-width: 1200px;
   margin: 0 auto; }
@@ -126,6 +188,9 @@ img {
 
 .icon {
   display: inline-block; }
+
+.normal {
+  font-style: normal !important; }
 
 .section-title {
   font-weight: 900;
@@ -251,8 +316,8 @@ body {
     #main > div.fp-tableCell div.con > div.main-img {
       position: relative;
       width: 30%;
-      min-width: 600px;
-      max-width: 600px;
+      min-width: 500px;
+      max-width: 500px;
       height: auto;
       z-index: 3;
       opacity: 1;
@@ -272,7 +337,7 @@ body {
       -webkit-transition: font-size 0.3s, opacity 0.5s;
       transition: font-size 0.3s, opacity 0.5s;
       position: absolute;
-      top: 60%;
+      top: 55%;
       z-index: 5; }
       #main > div.fp-tableCell div.con > div.title > h1 {
         font-weight: 900; }
@@ -315,7 +380,6 @@ body {
       margin: 10px 0;
       list-style: disc; }
       #about-me div.con > div.text-box > div.introduction > ul.career-list > li::before {
-        content: "";
         display: inline-block; }
 
 #skills div.con > div.text-box {
@@ -438,68 +502,172 @@ body {
   -webkit-animation: icon-jump 0.4s ease-out 12.8s 1 both;
           animation: icon-jump 0.4s ease-out 12.8s 1 both; }
 
-#work .con > ul.site-list > li > div.img-box {
-  max-width: 500px;
-  padding: 20px;
-  margin-left: 30px; }
-#work .con > ul.site-list > li > div.text-box {
-  margin-left: 100px; }
-  #work .con > ul.site-list > li > div.text-box > .title-con {
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end; }
-    #work .con > ul.site-list > li > div.text-box > .title-con > h3.site-title {
-      font-size: 4em;
-      font-weight: 700;
-      font-style: italic; }
-    #work .con > ul.site-list > li > div.text-box > .title-con > .sub-title {
-      font-size: 1.8em;
-      font-weight: 400;
-      margin: 15px 0; }
-  #work .con > ul.site-list > li > div.text-box > .tag-list {
-    margin: 35px 0 35px 0; }
-    #work .con > ul.site-list > li > div.text-box > .tag-list > li {
-      display: inline-block;
-      font-size: 1.3em;
-      font-weight: 700;
-      padding: 4px 10px;
-      margin-right: 10px;
-      border-radius: 6px;
-      border: 1px solid #fff;
-      opacity: 0.7; }
-  #work .con > ul.site-list > li > div.text-box > p {
-    font-size: 1.4em; }
-  #work .con > ul.site-list > li > div.text-box > .link-box {
-    margin: 50px 0; }
-    #work .con > ul.site-list > li > div.text-box > .link-box > a {
-      width: 150px;
-      height: 40px;
-      font-size: 1.6em;
-      font-weight: 900;
-      margin-right: 20px;
-      border: 2px solid #FF4646;
-      color: #FF4646;
-      border-radius: 7px;
-      color: #FF4646;
-      -webkit-transform: scale(1);
-              transform: scale(1);
-      -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
-      transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
-      transition: transform 0.3s, background 0.3s, color 0.3s;
-      transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s; }
-      #work .con > ul.site-list > li > div.text-box > .link-box > a:nth-child(2n) {
-        border: 2px solid #49FFA8;
-        color: #49FFA8; }
-        #work .con > ul.site-list > li > div.text-box > .link-box > a:nth-child(2n):hover {
-          background-color: #49FFA8; }
-      #work .con > ul.site-list > li > div.text-box > .link-box > a:hover {
-        -webkit-transform: scale(0.9);
-                transform: scale(0.9);
-        color: #030303;
-        background-color: #FF4646; }
+#work .con {
+  position: relative; }
+  #work .con div.slide .work > div.img-box {
+    max-width: 500px;
+    padding: 20px;
+    margin-left: 30px; }
+  #work .con div.slide .work > div.text-box {
+    margin-left: 100px; }
+    #work .con div.slide .work > div.text-box > .title-con {
+      -webkit-box-align: end;
+          -ms-flex-align: end;
+              align-items: end; }
+      #work .con div.slide .work > div.text-box > .title-con > h3.site-title {
+        font-size: 4em;
+        font-weight: 700;
+        font-style: italic; }
+      #work .con div.slide .work > div.text-box > .title-con > .sub-title {
+        font-size: 1.8em;
+        font-weight: 400;
+        margin: 15px 0; }
+    #work .con div.slide .work > div.text-box > .tag-list {
+      margin: 35px 0 35px 0; }
+      #work .con div.slide .work > div.text-box > .tag-list > li {
+        display: inline-block;
+        font-size: 1.3em;
+        font-weight: 700;
+        padding: 4px 10px;
+        margin-right: 10px;
+        border-radius: 6px;
+        border: 1px solid #fff;
+        opacity: 0.7; }
+    #work .con div.slide .work > div.text-box > p {
+      font-size: 1.4em; }
+    #work .con div.slide .work > div.text-box > .link-box {
+      margin: 50px 0; }
+      #work .con div.slide .work > div.text-box > .link-box > a {
+        width: 150px;
+        height: 40px;
+        font-size: 1.6em;
+        font-weight: 900;
+        margin-right: 20px;
+        border: 2px solid #FF4646;
+        color: #FF4646;
+        border-radius: 7px;
+        color: #FF4646;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+        -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
+        transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
+        transition: transform 0.3s, background 0.3s, color 0.3s;
+        transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s; }
+        #work .con div.slide .work > div.text-box > .link-box > a:nth-child(2n) {
+          border: 2px solid #49FFA8;
+          color: #49FFA8; }
+          #work .con div.slide .work > div.text-box > .link-box > a:nth-child(2n):hover {
+            background-color: #49FFA8; }
+        #work .con div.slide .work > div.text-box > .link-box > a:hover {
+          -webkit-transform: scale(0.9);
+                  transform: scale(0.9);
+          color: #030303;
+          background-color: #FF4646; }
+  #work .con .fp-controlArrow {
+    opacity: 0.3;
+    -webkit-transition: opacity 0.5s;
+    transition: opacity 0.5s; }
+    #work .con .fp-controlArrow:hover {
+      opacity: 1; }
+    #work .con .fp-controlArrow.fp-prev {
+      left: -15px;
+      border-width: 20px 14px 20px 0;
+      -webkit-animation: prev-ani 0.7s ease-in-out 0s infinite alternate both;
+              animation: prev-ani 0.7s ease-in-out 0s infinite alternate both; }
+    #work .con .fp-controlArrow.fp-next {
+      right: -15px;
+      border-width: 20px 0 20px 14px;
+      -webkit-animation: next-ani 0.7s ease-in-out 0s infinite alternate both;
+              animation: next-ani 0.7s ease-in-out 0s infinite alternate both; }
 #work.active .con > ul.site-list {
   -webkit-animation: fade-up-transform 3s ease-in-out 0s 1 alternate both;
           animation: fade-up-transform 3s ease-in-out 0s 1 alternate both; }
+
+#design div.con > ul.gallery {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
+  #design div.con > ul.gallery > li {
+    width: 225px;
+    height: 225px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    margin: 20px 20px;
+    position: relative;
+    overflow: hidden; }
+    #design div.con > ul.gallery > li img {
+      -webkit-transition: -webkit-transform 0.3s;
+      transition: -webkit-transform 0.3s;
+      transition: transform 0.3s;
+      transition: transform 0.3s, -webkit-transform 0.3s; }
+    #design div.con > ul.gallery > li::after {
+      position: absolute;
+      display: block;
+      padding: 20px;
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+      content: '';
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background: rgba(0, 0, 0, 0);
+      top: 0;
+      left: 0;
+      -webkit-transition: background-color 0.3s;
+      transition: background-color 0.3s;
+      cursor: pointer;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      font-size: 1.5em;
+      text-align: center;
+      word-break: keep-all;
+      overflow: hidden; }
+    #design div.con > ul.gallery > li:hover::after {
+      content: attr(data-gallery-title);
+      background: rgba(0, 0, 0, 0.9); }
+    #design div.con > ul.gallery > li:hover img {
+      -webkit-transform: scale(1.2);
+              transform: scale(1.2); }
+#design.active div.con > ul.gallery {
+  -webkit-animation: up-down-ani 2s ease-in-out 2s infinite alternate both;
+          animation: up-down-ani 2s ease-in-out 2s infinite alternate both; }
+
+#design.active div.con > ul.gallery > li:nth-child(1) {
+  -webkit-animation: gallery-ani 0.3s ease-in-out 0.15s 1 both;
+          animation: gallery-ani 0.3s ease-in-out 0.15s 1 both; }
+
+#design.active div.con > ul.gallery > li:nth-child(2) {
+  -webkit-animation: gallery-ani 0.3s ease-in-out 0.3s 1 both;
+          animation: gallery-ani 0.3s ease-in-out 0.3s 1 both; }
+
+#design.active div.con > ul.gallery > li:nth-child(3) {
+  -webkit-animation: gallery-ani 0.3s ease-in-out 0.45s 1 both;
+          animation: gallery-ani 0.3s ease-in-out 0.45s 1 both; }
+
+#design.active div.con > ul.gallery > li:nth-child(4) {
+  -webkit-animation: gallery-ani 0.3s ease-in-out 0.6s 1 both;
+          animation: gallery-ani 0.3s ease-in-out 0.6s 1 both; }
+
+#design.active div.con > ul.gallery > li:nth-child(5) {
+  -webkit-animation: gallery-ani 0.3s ease-in-out 0.75s 1 both;
+          animation: gallery-ani 0.3s ease-in-out 0.75s 1 both; }
+
+#design.active div.con > ul.gallery > li:nth-child(6) {
+  -webkit-animation: gallery-ani 0.3s ease-in-out 0.9s 1 both;
+          animation: gallery-ani 0.3s ease-in-out 0.9s 1 both; }
+
+#design.active div.con > ul.gallery > li:nth-child(7) {
+  -webkit-animation: gallery-ani 0.3s ease-in-out 1.05s 1 both;
+          animation: gallery-ani 0.3s ease-in-out 1.05s 1 both; }
+
+#design.active div.con > ul.gallery > li:nth-child(8) {
+  -webkit-animation: gallery-ani 0.3s ease-in-out 1.2s 1 both;
+          animation: gallery-ani 0.3s ease-in-out 1.2s 1 both; }
 
 @media (max-width: 1080px) {
   #main > div.fp-tableCell div.con > div.main-img {
