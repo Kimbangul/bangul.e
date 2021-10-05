@@ -1,6 +1,14 @@
+
+
 $(document).ready(function() {
 
+
+
     function fullpage_init(){
+
+
+       
+
         $('#contents').fullpage({
             //options here
             licenseKey: 'OPEN-SOURCE-GPLV3-LICENSE',
@@ -10,7 +18,9 @@ $(document).ready(function() {
             navigationTooltips: ['main', 'about me','skills','work', 'design', 'contact'],
             showActiveTooltip: true,
             scrollingSpeed: 1000,  
-            scrollOverflow: true               
+            scrollOverflow: true,
+            responsiveWidth: 500,
+                   
         });
 
     }
