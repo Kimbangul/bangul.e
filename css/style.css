@@ -295,6 +295,9 @@ img {
 #fp-nav ul li .fp-tooltip {
   font-weight: 600; }
 
+#fp-nav ul li:last-child {
+  display: none; }
+
 html,
 body {
   font-size: 10px;
@@ -326,15 +329,20 @@ section {
   color: #fff;
   font-size: 2em; }
   #main-header > div.logo {
-    font-weight: 900; }
+    font-weight: 900;
+    opacity: 1;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
+    #main-header > div.logo:hover {
+      color: #49FFA8; }
   #main-header > ul.sns > li > a {
     font-size: 0.8em;
     padding: 0 10px;
-    opacity: 0.7;
-    -webkit-transition: opacity 0.3s;
-    transition: opacity 0.3s; }
+    opacity: 1;
+    -webkit-transition: color 0.3s;
+    transition: color 0.3s; }
     #main-header > ul.sns > li > a:hover {
-      opacity: 1; }
+      color: #49FFA8; }
 
 #video-bg {
   position: absolute;
@@ -440,8 +448,8 @@ section {
       transition: transform 0.3s, background 0.3s, color 0.3s;
       transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
       margin-right: 0px;
-      border: 2px solid #FF4646;
-      color: #FF4646;
+      border: 2px solid #49FFA8;
+      color: #49FFA8;
       font-weight: 700;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -456,7 +464,7 @@ section {
         -webkit-transform: scale(0.9);
                 transform: scale(0.9);
         color: #030303;
-        background-color: #FF4646; }
+        background-color: #49FFA8; }
   #about-me div.con > div.text-box > div.introduction > ul.career-list {
     font-size: 1.4em; }
     #about-me div.con > div.text-box > div.introduction > ul.career-list > li {
@@ -504,7 +512,7 @@ section {
                 animation: up-down-ani 0.7s ease-in-out 0s infinite alternate both; }
       #skills div.con > div.text-box > ul.skill-description > li span {
         font-size: 1.25em;
-        color: #FF4646; }
+        color: #FCFF52; }
       #skills div.con > div.text-box > ul.skill-description > li:nth-child(2n) > span {
         color: #49FFA8; }
 #skills div.con > div.skill-list {
@@ -684,8 +692,8 @@ section {
         transition: transform 0.3s, background 0.3s, color 0.3s;
         transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
         margin-right: 20px;
-        border: 2px solid #FF4646;
-        color: #FF4646;
+        border: 2px solid #FCFF52;
+        color: #FCFF52;
         font-weight: 700;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -700,7 +708,7 @@ section {
           -webkit-transform: scale(0.9);
                   transform: scale(0.9);
           color: #030303;
-          background-color: #FF4646; }
+          background-color: #FCFF52; }
         #work .con div.work-wrap .work > div.text-box > .link-box > a:nth-child(2n) {
           width: 150px;
           height: 40px;
@@ -891,8 +899,8 @@ section {
     transition: transform 0.3s, background 0.3s, color 0.3s;
     transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
     margin-right: 20px;
-    border: 2px solid #FF4646;
-    color: #FF4646;
+    border: 2px solid #FCFF52;
+    color: #FCFF52;
     font-weight: 700;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -907,7 +915,7 @@ section {
       -webkit-transform: scale(0.9);
               transform: scale(0.9);
       color: #030303;
-      background-color: #FF4646; }
+      background-color: #FCFF52; }
     #contact div.con > div.text-box > div.link-box > a:nth-child(2) {
       width: 150px;
       height: 40px;
@@ -939,6 +947,16 @@ section {
         background-color: #49FFA8; }
     #contact div.con > div.text-box > div.link-box > a > i {
       margin-right: 10px; }
+
+footer {
+  margin-top: 100px;
+  padding: 100px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.2); }
+  footer div.text-box {
+    font-size: 1.6em;
+    line-height: 1.8em;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6); }
 
 @media (max-width: 1200px) {
   .con {
@@ -1131,7 +1149,14 @@ section {
         -ms-flex-order: 0;
             order: 0;
     margin: 0 0 70px 0;
-    font-size: 3em; } }
+    font-size: 3em; }
+
+  footer div.text-box {
+    font-size: 1.4em;
+    line-height: 1.6em; }
+    footer div.text-box > span.copy {
+      display: inline-block;
+      margin-top: 10px; } }
 @media (max-width: 720px) {
   #main > div.fp-tableCell div.con > div.main-img {
     min-width: 320px; }
@@ -1341,7 +1366,10 @@ section {
         width: 180px;
         height: 45px; }
   #contact .section-title {
-    top: -100px; } }
+    top: -100px; }
+
+  footer div.text-box {
+    font-size: 1.2em; } }
 @media (max-width: 450px) {
   #main > div.fp-tableCell div.con > div.main-img {
     min-width: 250px; }

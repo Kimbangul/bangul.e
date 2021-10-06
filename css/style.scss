@@ -334,6 +334,11 @@ img {
     font-weight: 600;
 }
 
+#fp-nav ul li:last-child{
+    display: none;
+    // footer의 navigation이 보이지 않도록
+}
+
 // fp end
 
 html,
@@ -377,6 +382,12 @@ section{
 
     &>div.logo {
         font-weight: 900;
+        opacity: 1;
+        transition:  color 0.3s;
+        &:hover{
+         
+            color: $point-color-blue;
+        }
     }
 
     &>ul.sns {
@@ -385,11 +396,11 @@ section{
             &>a {
                 font-size: 0.8em;
                 padding: 0 10px;
-                opacity: 0.7;
-                transition: opacity 0.3s;
+                opacity:1;
+                transition: color 0.3s;
 
-                &:hover {
-                    opacity: 1;
+                &:hover {                   
+                    color: $point-color-blue;
                 }
             }
         }
@@ -576,7 +587,7 @@ section{
                 & > div.link-box{
                     margin-bottom: 50px;
                     & > a{
-                        @include link-btn($point-color-pink);
+                        @include link-btn($point-color-blue);
                     }                    
                 }
 
@@ -648,7 +659,7 @@ section{
                    & span{
                     //  포인트 컬러
                         font-size: 1.25em;
-                        color: $point-color-pink;
+                        color: $point-color-yellow;
                     }
 
                     &:nth-child(2n){
@@ -815,7 +826,7 @@ section{
                     & > .link-box{
                         margin: 50px 0;
                         & > a{    
-                        @include link-btn($point-color-pink, 20px);                
+                        @include link-btn($point-color-yellow, 20px);                
                        
 
                         &:nth-child(2n){                        
@@ -1084,7 +1095,7 @@ section{
                 // link btn
                 margin-top: 70px;
                 & > a{
-                    @include link-btn($point-color-pink, 20px);
+                    @include link-btn($point-color-yellow, 20px);
 
                     &:nth-child(2){
                         @include link-btn($point-color-blue, 20px);
@@ -1104,6 +1115,24 @@ section{
     }
 }
 // contact end
+// footer start
+
+footer{
+    margin-top: 100px;
+    padding: 100px 0;
+    
+    border-top: 1px solid rgba(255,255,255,0.2);
+
+    & div.text-box{
+        font-size: 1.6em;
+        line-height: 1.8em;
+        text-align: center;
+        color: rgba(255,255,255,0.6);
+
+       
+    }
+}
+// footer end
 
 // responsive start
 
@@ -1484,6 +1513,19 @@ section{
     }
 
     // design end
+    // footer start
+
+    footer{
+        & div.text-box{
+            font-size: 1.4em;
+            line-height: 1.6em;
+            & > span.copy{
+                display: inline-block;
+                margin-top: 10px;
+            }
+        }
+    }
+    // footer end
 }
 
 @media(max-width: 720px) {
@@ -1591,6 +1633,7 @@ section:not(#main){
         & > div.logo{
             & > a{
                 font-size: 0.8em;
+                
             }
         }
 
@@ -1898,6 +1941,16 @@ section:not(#main){
 }
 
 // contact end
+ // footer start
+
+ footer{
+    & div.text-box{
+        font-size: 1.2em;
+    }
+}
+// footer end
+
+
 }
 
 
