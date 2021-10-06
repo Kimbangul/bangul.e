@@ -741,6 +741,9 @@ body {
     transition: -webkit-transform 0.5s;
     transition: transform 0.5s;
     transition: transform 0.5s, -webkit-transform 0.5s; }
+    #design div.con > ul.gallery > li > a {
+      width: 100%;
+      height: 100%; }
     #design div.con > ul.gallery > li img {
       -webkit-transition: -webkit-transform 0.3s;
       transition: -webkit-transform 0.3s;
@@ -923,7 +926,76 @@ body {
     letter-spacing: 0.07em; } }
 @media (max-width: 768px) {
   .con {
-    padding: 0 100px; } }
+    padding: 0 100px; }
+
+  #about-me div.con > div.text-box > .pr {
+    font-size: 2.9em;
+    line-height: 1.4em; }
+    #about-me div.con > div.text-box > .pr > .bold {
+      font-size: 1.5em; }
+  #about-me div.con > div.text-box > div.introduction > p {
+    font-size: 1.5em; }
+  #about-me div.con > div.text-box > div.introduction > ul.career-list {
+    font-size: 1.3em; }
+  #about-me div.con > div.text-box > div.introduction > div.link-box {
+    margin-bottom: 70px; }
+
+  #skills div.con > div.text-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+    #skills div.con > div.text-box > p {
+      margin-right: 0px;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+      margin-bottom: 50px; }
+  #skills div.con > div.skill-list {
+    margin-top: 70px; }
+    #skills div.con > div.skill-list > ul.row {
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+      #skills div.con > div.skill-list > ul.row > li.skill {
+        margin: 15px 15px;
+        -ms-flex-preferred-size: 10%;
+            flex-basis: 10%; }
+
+  #work .con div.work-wrap .work {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    #work .con div.work-wrap .work > div.img-box {
+      max-width: 400px;
+      margin-left: 0; }
+    #work .con div.work-wrap .work > div.text-box {
+      margin-top: 30px; }
+  #work .con .fp-controlArrow {
+    top: 25%;
+    opacity: 0.6; }
+    #work .con .fp-controlArrow.fp-next {
+      right: 120px; }
+    #work .con .fp-controlArrow.fp-prev {
+      left: 120px; }
+
+  #design div.con {
+    padding-top: 200px;
+    padding-bottom: 200px; }
+    #design div.con > ul.gallery {
+      -webkit-box-ordinal-group: 2;
+          -ms-flex-order: 1;
+              order: 1; }
+      #design div.con > ul.gallery > li {
+        border: 1px solid rgba(255, 255, 255, 0.6); }
+    #design div.con > p {
+      -webkit-box-ordinal-group: 1;
+          -ms-flex-order: 0;
+              order: 0;
+      margin: 0 0 70px 0;
+      font-size: 3em; } }
 @media (max-width: 720px) {
   #main > div.fp-tableCell div.con > div.main-img {
     min-width: 320px; }
@@ -963,6 +1035,8 @@ body {
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start; }
+    #main-header > div.logo > a {
+      font-size: 0.8em; }
     #main-header > ul.sns {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
@@ -985,7 +1059,7 @@ body {
     #about-me div.con > div.text-box > .pr > .bold {
       font-size: 1.4em; }
   #about-me div.con > div.text-box > div.introduction {
-    margin-top: 40px;
+    margin-top: 50px;
     line-height: 2.6em; }
     #about-me div.con > div.text-box > div.introduction > p {
       font-size: 1.5em;
@@ -993,82 +1067,69 @@ body {
       #about-me div.con > div.text-box > div.introduction > p:nth-of-type(2) {
         margin-bottom: 80px; }
     #about-me div.con > div.text-box > div.introduction > ul.career-list {
-      margin: 150px 0px 0px 15px; }
+      margin: 120px 0px 0px 15px; }
 
-  #skills div.con > div.text-box {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; }
-    #skills div.con > div.text-box > p {
-      margin-right: 0px;
-      -ms-flex-item-align: start;
-          align-self: flex-start;
-      margin-bottom: 50px; }
-    #skills div.con > div.text-box > ul.skill-description {
-      font-size: 1.4em; }
-  #skills div.con > div.skill-list > ul.row {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap; }
-    #skills div.con > div.skill-list > ul.row > li.skill {
-      margin: 15px 15px; }
+  #skills div.con > div.text-box > p {
+    font-size: 3em; }
+  #skills div.con > div.text-box > ul.skill-description {
+    font-size: 1.4em; }
+    #skills div.con > div.text-box > ul.skill-description > li {
+      margin: 40px 0; }
+      #skills div.con > div.text-box > ul.skill-description > li > span {
+        font-size: 1.1em; }
+  #skills div.con > div.skill-list > ul.row > li.skill {
+    -ms-flex-preferred-size: auto;
+        flex-basis: auto; }
 
   #work .con {
     margin-bottom: 0; }
-    #work .con div.work-wrap .work {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-              flex-direction: column;
-      -webkit-box-align: center;
-          -ms-flex-align: center;
-              align-items: center; }
-      #work .con div.work-wrap .work > div.img-box {
-        max-width: 250px;
-        margin-left: 0;
-        padding: 0;
-        margin-bottom: 20px; }
-      #work .con div.work-wrap .work > div.text-box {
-        margin-left: 0;
-        padding-right: 0; }
-        #work .con div.work-wrap .work > div.text-box > .tag-list {
-          -webkit-box-ordinal-group: 3;
-              -ms-flex-order: 2;
-                  order: 2;
-          margin: 50px 0 0 0;
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -ms-flex-wrap: wrap;
-              flex-wrap: wrap; }
-          #work .con div.work-wrap .work > div.text-box > .tag-list > li {
-            margin: 0 10px 10px 0px; }
-        #work .con div.work-wrap .work > div.text-box > p {
-          -webkit-box-ordinal-group: 2;
-              -ms-flex-order: 1;
-                  order: 1; }
-        #work .con div.work-wrap .work > div.text-box > .title-con {
-          text-align: center; }
-          #work .con div.work-wrap .work > div.text-box > .title-con > h3.site-title {
-            font-size: 2.8em;
-            margin-top: 15px; }
-          #work .con div.work-wrap .work > div.text-box > .title-con > .sub-title {
-            margin: 15px 0;
-            font-size: 1.4em; }
-        #work .con div.work-wrap .work > div.text-box > .link-box {
-          margin: 40px 0;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-              -ms-flex-direction: column;
-                  flex-direction: column; }
-          #work .con div.work-wrap .work > div.text-box > .link-box > a {
-            margin: 0 0 25px 0;
+    #work .con div.work-wrap .work > div.img-box {
+      max-width: 250px;
+      margin-left: 0;
+      padding: 0; }
+    #work .con div.work-wrap .work > div.text-box {
+      margin-left: 0;
+      padding-right: 0; }
+      #work .con div.work-wrap .work > div.text-box > .tag-list {
+        -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+                order: 2;
+        margin: 70px 0 0 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap; }
+        #work .con div.work-wrap .work > div.text-box > .tag-list > li {
+          margin: 0 10px 10px 0px; }
+      #work .con div.work-wrap .work > div.text-box > p {
+        -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+                order: 1; }
+      #work .con div.work-wrap .work > div.text-box > .title-con {
+        text-align: center; }
+        #work .con div.work-wrap .work > div.text-box > .title-con > h3.site-title {
+          font-size: 2.8em;
+          margin-top: 15px; }
+        #work .con div.work-wrap .work > div.text-box > .title-con > .sub-title {
+          margin: 15px 0;
+          font-size: 1.4em; }
+      #work .con div.work-wrap .work > div.text-box > .link-box {
+        margin: 40px 0;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column; }
+        #work .con div.work-wrap .work > div.text-box > .link-box > a {
+          margin: 0 0 25px 0;
+          width: 180px;
+          height: 45px; }
+          #work .con div.work-wrap .work > div.text-box > .link-box > a:nth-child(2n) {
+            margin-right: 0;
             width: 180px;
             height: 45px; }
-            #work .con div.work-wrap .work > div.text-box > .link-box > a:nth-child(2n) {
-              margin-right: 0;
-              width: 180px;
-              height: 45px; }
+    #work .con .fp-controlArrow {
+      display: none; }
   #work .fp-slidesContainer {
     width: 100% !important;
     -webkit-transition: none !important;
@@ -1081,29 +1142,22 @@ body {
       width: 100% !important;
       display: block;
       float: none;
-      margin-bottom: 175px; }
+      margin-bottom: 200px; }
 
-  #design div.con > ul.gallery {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1; }
-    #design div.con > ul.gallery > li {
-      width: 100%;
-      max-width: 350px;
-      margin: 35px 20px; }
-      #design div.con > ul.gallery > li img {
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: center;
-           object-position: center; }
-      #design div.con > ul.gallery > li::after {
-        font-size: 1.8em; }
+  #design div.con > ul.gallery > li {
+    width: 100%;
+    max-width: 350px;
+    margin: 30px 20px; }
+    #design div.con > ul.gallery > li img {
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center; }
+    #design div.con > ul.gallery > li::after {
+      font-size: 1.8em; }
   #design div.con > p {
     font-size: 2em;
-    -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-            order: 0;
     margin: 0 0 50px 0; }
 
   #contact div.con > div.text-box > p {
