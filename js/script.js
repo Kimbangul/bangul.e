@@ -19,7 +19,7 @@ $(document).ready(function() {
             showActiveTooltip: true,
             scrollingSpeed: 1000,  
             scrollOverflow: true,
-            responsiveWidth: 500,
+            responsiveWidth: 1000,
                    
         });
 
