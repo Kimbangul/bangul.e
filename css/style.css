@@ -353,8 +353,10 @@ section {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
           -ms-flex-direction: column;
-              flex-direction: column; }
+              flex-direction: column;
+      pointer-events: none; }
       #main-header > .sns-btn > div.dot > span {
+        position: relative;
         display: inline-block;
         width: 3px;
         height: 3px;
@@ -371,6 +373,8 @@ section {
       transition: color 0.3s; }
       #main-header > .sns-btn ul.sns > li > a:hover {
         color: #49FFA8; }
+      #main-header > .sns-btn ul.sns > li > a > i {
+        pointer-events: none; }
 
 #video-bg {
   position: absolute;

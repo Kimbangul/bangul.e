@@ -420,13 +420,17 @@ section {
         & > div.dot{
             // align-items: flex-end;
             flex-direction: column;
+            pointer-events: none;
+            
             & > span{
+                position: relative;
                 display: inline-block;
                 width: 3px;
                 height: 3px;
                 background: #fff;
                 border-radius: 100%;
                 margin-bottom: 3px;
+                
 
                 &:last-child{
                     margin-bottom: 0;
@@ -437,7 +441,7 @@ section {
         & ul.sns {
             
             &>li {
-    
+               
                 &>a {
                     font-size: 0.8em;
                     padding: 0 10px;
@@ -446,6 +450,10 @@ section {
     
                     &:hover {
                         color: $point-color-blue;
+                    }
+
+                    & > i{
+                        pointer-events: none;
                     }
                 }
             }
