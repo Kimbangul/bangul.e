@@ -194,6 +194,13 @@ img {
         color: #030303;
         background-color: $color;
     }
+
+    @media (min-width: 2000px){
+        &{
+            min-width: 200px;
+            height: 55px;
+        }
+    }
 }
 
 @mixin tagList(){
@@ -361,6 +368,10 @@ img {
     justify-content: space-between;
 }
 
+.flex-jc-e{
+    justify-content: flex-end;
+}
+
 .flex-d-c {
     flex-direction: column;
 }
@@ -397,12 +408,12 @@ img {
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li a.active span,
 .fp-slidesNav ul li:hover a.active span {
-    background: $point-color-blue;
+    // background: $point-color-blue;
     opacity: 1;
 }
 
 #fp-nav ul li .fp-tooltip {
-    color: $point-color-blue;
+    // color: $point-color-blue;
     font-weight: 600;
 }
 
@@ -681,8 +692,8 @@ section {
 
             &>div.introduction {
                 margin-top: 30px;
-
                 font-weight: 300;
+        
 
                 &>p {
                     font-size: 1.8em;
@@ -775,7 +786,7 @@ section {
             &>p {
                 font-weight: 600;
                 font-size: 4em;
-                line-height: 1.3em;
+                line-height: 1.5em;
                 // margin-bottom: 50px;
                 margin-right: 120px;
 
@@ -1419,7 +1430,7 @@ footer {
         margin: 175px 0;
 
         & .row{
-            margin: 175px 0;
+            margin: 150px 0;
             font-size: 1.8em;
             line-height: 2em;
             position: relative;
@@ -1438,10 +1449,20 @@ footer {
             & .img-box{
                 position: relative;
                 max-width: 55%;
+
+                &.portrait-img{
+                    max-width: 35%;
+                }
+                &.mb-img{
+                    max-width: 35%;
+                    margin-left: 250px;
+                }
                 
                 & img{
                     width: 100%;
                     box-shadow: 0 0 8px rgba(255,255,255,0.1);
+
+                    
                     &.sub-img{
                         width: 40%;
                         position: absolute;
@@ -1484,6 +1505,225 @@ footer {
 
 // responsive start
 
+@media(min-width: 2000px){
+    $max-width: 1440px;
+
+    html,body{
+        font-size: 12px;
+    }
+    .con{
+        max-width: $max-width;
+    }
+
+    #about-me{
+        & div.con{
+            & > div.text-box{
+                & > div.introduction{
+                    margin-top: 40px;
+                    & > p{
+                        margin-bottom: 40px;
+                        &:nth-of-type(2){
+                            margin-bottom: 50px;
+                        }
+                    }
+                    & > div.link-box{
+                        margin-bottom: 70px;
+                    }
+
+                    & > ul.career-list{
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+
+    #skills{
+        & div.con{
+            & > div.text-box{
+                & > ul.skill-description{
+                    & > li{
+                        margin: 40px 0;
+                        &::before{
+                            left: -45px;
+                        }
+                    }
+                }
+
+                & > p{
+                    & > .icon{
+                        margin-top: 30px;
+                    }
+                }
+            }
+
+            & > div.skill-list{
+                margin-top: 110px;
+                & > ul.row{
+                    & > li.skill{
+                        width: 65px;
+                        margin: 0 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    #works{
+        & .con{
+            & div.work-wrap{
+                & .work{
+                    & > div.img-box{
+                        margin-left: 10px;
+                        padding: 0;
+                    }
+
+                    & > div.text-box{
+                        margin-left: 80px;
+                        padding-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+
+    #design{
+        & div.con{
+            & > p{
+                margin-top: 60px;
+            }
+            & > ul.gallery{
+                & >li{
+                    width: 250px;
+                    height: 250px;
+                }
+            }
+        }
+    }
+    
+    #contact{
+        & div.con{
+            & > div.text-box{
+                & > p{
+                    &:first-child{
+                        margin-bottom: 60px;
+                    }
+                    margin-bottom: 30px;
+                }
+                & > div.link-box{
+                    margin-top: 80px;
+                }
+            }
+        }
+    }
+}
+
+@media(max-width: 1440px){
+
+
+        .site-title{
+            font-size: 3.5em;
+        }
+
+        .sub-title{
+            font-size: 1.6em;
+        }
+
+        .tag-list{
+            margin: 30px 0 45px 0;
+        }
+
+        // about me start
+
+        #about-me{
+            & div.con{
+                & > div.text-box{
+                    & > .pr{
+                        font-size: 2.8em;
+                    }
+    
+                    & > div.introduction{
+                        & > p{
+                            font-size: 1.6em;
+                            line-height: 1.8em;
+                        }
+                    }
+                }
+            }
+        }
+        // about me end
+    
+        // skills start
+    
+        #skills{
+            & div.con{
+                & > div.text-box{
+                    & > p{
+                        font-size: 3em;
+                    }
+    
+                    & > ul.skill-description{
+                        font-size: 1.6em;
+                    }
+                }
+            }
+        }
+        // skills end
+        // works start
+    #work{
+        & .con{
+            & div.work-wrap{
+                & .work{
+                    & > div.text-box{
+                        & > .title-con{
+                            & > .sub-title{
+                                margin: 25px 0;
+                            }
+                        }
+                        & > p{
+                            font-size: 1.6em;
+                            line-height: 1.8em;
+                        }
+                        & > .link-box{
+                            margin: 60px 0;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    // works end
+    // design start
+    #design{
+        & div.con{
+            & > p{
+                font-size: 2.5em;
+            }
+        }
+    }
+    // design end
+    // contact start
+    #contact {
+        & div.con{
+            & > div.text-box{
+                & > p{
+                    font-size: 1.6em;
+                    line-height: 1.8em;
+                }
+            }
+        }
+    }
+    // contact end
+    // footer start
+    footer{
+        div.text-box{
+            font-size: 1.4em;
+        }
+    }
+    // footer end
+}
+
 
 @media(max-width: 1200px) {
     $max-width: 768px;
@@ -1495,6 +1735,7 @@ footer {
         //    padding-top: 200px !important;
         //    padding-bottom: 200px !important;
     }
+
 
     // section{
     //     margin: 100px 0;
@@ -1659,6 +1900,9 @@ footer {
     // fullpage 해제
     section:not(#main) {
         margin: 300px 0;
+        &#contact{
+            margin-bottom: 0px;
+        }
     }
 
     .section-title {
@@ -1706,6 +1950,7 @@ footer {
     }
 
     #contact {
+        
         & .section-title {
             top: 70px;
         }
@@ -2071,7 +2316,8 @@ footer {
     }
 
     // section title
-    .section-title {
+    .section-title
+     {
 
 
         position: relative;
@@ -2094,6 +2340,10 @@ footer {
         &::before {
             opacity: 0.4;
         }
+    }
+
+    .site-title{
+        font-size: 3em;
     }
 
     // fullpage nav
@@ -2310,6 +2560,7 @@ footer {
 
                         & > p{
                             text-align: center;
+                            font-size: 1.5em;
                         }
                         
                         &>.title-con {
@@ -2317,6 +2568,7 @@ footer {
                             &>h3.site-title {
                                 // font-size: 2.8em;
                                 margin-top: 15px;
+                                font-size: 3em;
                             }
                             &>.sub-title {
                                 margin: 15px 0;                           
@@ -2338,6 +2590,10 @@ footer {
                                     height: 45px;
                                 }
                             }
+                        }
+                        
+                        & > .tag-list{
+                            margin: 100px 0 0 0;
                         }
                     }
                 }
@@ -2420,6 +2676,7 @@ footer {
             &>div.text-box {
                 &>p {
                     margin-bottom: 30px;
+                    font-size: 1.5em;
 
                     &:first-child {
                         font-size: 2.5em;
@@ -2558,6 +2815,53 @@ footer {
                     width: 180px;
                     height: 180px;
                 }
+            }
+        }
+    }
+}
+
+@media(max-width: 300px){
+    body,html{
+        font-size: 8px;
+    }
+
+    section{
+
+    }
+
+    #about-me{
+        & div.con{
+            & > div.text-box{
+                & > div.introduction{
+                    & > div.link-box{
+                        margin-bottom: 50px;
+                    }
+                    & > ul.carrer-list{
+                        margin: 0px 0px 0px 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    #skills{
+        & div.con{
+            & > div.text-box{
+                & > ul.skill-description{
+                    margin-left: 20px;
+                    & > li::before{
+                        left: -25px;
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+
+    #work{
+        .fp-slidesContainer{
+            & > .fp-slide{
+                magrin-bottom: 200px;
             }
         }
     }
