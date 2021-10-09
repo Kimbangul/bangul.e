@@ -31,9 +31,9 @@ $(document).ready(function () {
                         triggerHook: 0.5, //viewport에 대해 상대적으로 어느 시점에서 보여줄 건지를 설정
                         offset: 0,
                     })
-                    .addIndicators({
-                        name:"section" + i
-                      })
+                    // .addIndicators({
+                    //     name:"section" + i
+                    //   })
                     .setClassToggle(revealElements[i], "active")
                     .addTo(controller); // 컨트롤러 등록                
             }
@@ -63,6 +63,7 @@ $(document).ready(function () {
 
 
     }
+
     scrollMagic_init();
     fullpage_init();
 

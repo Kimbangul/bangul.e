@@ -195,6 +195,31 @@ img {
   100% {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg); } }
+@-webkit-keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+@keyframes typing {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+@-webkit-keyframes blink-cursor {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #fff; } }
+@keyframes blink-cursor {
+  from, to {
+    border-color: transparent; }
+  50% {
+    border-color: #fff; } }
+.typing {
+  border-right: .15em solid #fff;
+  -webkit-animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+          animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; }
+
 .con {
   max-width: 1200px;
   margin: 0 auto; }
@@ -896,7 +921,7 @@ section {
       border-width: 20px 0 20px 14px;
       -webkit-animation: next-ani 0.7s ease-in-out 0s infinite alternate both;
               animation: next-ani 0.7s ease-in-out 0s infinite alternate both; }
-#work.active .con > ul.site-list {
+#work.active .con .work {
   -webkit-animation: fade-up-transform 3s ease-in-out 0s 1 alternate both;
           animation: fade-up-transform 3s ease-in-out 0s 1 alternate both; }
 
