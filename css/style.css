@@ -281,13 +281,18 @@ img {
   font-size: 4em;
   font-weight: 700;
   font-style: italic;
-  line-height: 1.3em; }
+  text-align: center;
+  line-height: 1.3em;
+  word-break: keep-all; }
   @media (max-width: 700px) {
     .site-title {
-      font-size: 3.2em; } }
+      font-size: 3.2em !important; } }
   @media (max-width: 500px) {
     .site-title {
-      font-size: 2.8em; } }
+      font-size: 2.8em !important; } }
+  @media (max-width: 400px) {
+    .site-title {
+      font-size: 2.6em !important; } }
 
 .sub-title {
   font-size: 1.8em;
@@ -792,85 +797,58 @@ section {
 #work .con {
   position: relative;
   margin-bottom: 10px; }
-  #work .con div.work-wrap .work > .num {
-    font-size: 2em;
-    font-weight: 700;
-    padding-bottom: 7px;
-    margin-bottom: 30px;
-    position: relative; }
-    #work .con div.work-wrap .work > .num::after {
-      content: "";
-      bottom: 0;
-      left: 50%;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%);
-      display: block;
-      position: absolute;
-      width: 30px;
-      height: 1px;
-      background-color: #fff; }
-  #work .con div.work-wrap .work > div.img-box {
-    max-width: 500px;
-    padding: 20px;
-    margin-left: 30px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-animation: up-down-ani 1.5s ease-in-out 2s infinite alternate both;
-            animation: up-down-ani 1.5s ease-in-out 2s infinite alternate both; }
-  #work .con div.work-wrap .work > div.text-box {
-    margin-left: 70px;
-    padding-right: 20px; }
-    #work .con div.work-wrap .work > div.text-box > .title-con {
-      -webkit-box-align: end;
-          -ms-flex-align: end;
-              align-items: end; }
-      #work .con div.work-wrap .work > div.text-box > .title-con > .sub-title {
-        margin: 15px 0; }
-    #work .con div.work-wrap .work > div.text-box > p {
-      font-size: 1.8em;
-      line-height: 2em; }
-    #work .con div.work-wrap .work > div.text-box > .link-box {
-      margin: 50px 0; }
-      #work .con div.work-wrap .work > div.text-box > .link-box > a {
-        min-width: 150px;
-        padding: 0 20px;
-        height: 45px;
-        font-size: 1.6em;
-        border-radius: 7px;
-        -webkit-transform: scale(1);
-                transform: scale(1);
-        -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
-        transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
-        transition: transform 0.3s, background 0.3s, color 0.3s;
-        transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
-        margin-right: 20px;
-        border: 2px solid #FCFF52;
-        color: #FCFF52;
-        font-weight: 700;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-            -ms-flex-align: center;
-                align-items: center;
-        -webkit-box-pack: center;
-            -ms-flex-pack: center;
-                justify-content: center;
-        text-align: center; }
-        #work .con div.work-wrap .work > div.text-box > .link-box > a:hover {
-          -webkit-transform: scale(0.9);
-                  transform: scale(0.9);
-          color: #030303;
-          background-color: #FCFF52; }
-        @media (min-width: 2000px) {
-          #work .con div.work-wrap .work > div.text-box > .link-box > a {
-            min-width: 200px;
-            height: 55px; } }
-        #work .con div.work-wrap .work > div.text-box > .link-box > a:nth-child(2n) {
+  #work .con div.work-wrap .work {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+    -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.3s, opacity 0.3s;
+    transition: transform 0.3s, opacity 0.3s, -webkit-transform 0.3s; }
+    #work .con div.work-wrap .work > .num {
+      font-size: 2em;
+      font-weight: 700;
+      padding-bottom: 7px;
+      margin-bottom: 30px;
+      position: relative; }
+      #work .con div.work-wrap .work > .num::after {
+        content: "";
+        bottom: 0;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        display: block;
+        position: absolute;
+        width: 30px;
+        height: 1px;
+        background-color: #fff; }
+    #work .con div.work-wrap .work > div.img-box {
+      max-width: 500px;
+      padding: 20px;
+      margin-left: 30px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center;
+      -webkit-animation: up-down-ani 1.5s ease-in-out 2s infinite alternate both;
+              animation: up-down-ani 1.5s ease-in-out 2s infinite alternate both; }
+    #work .con div.work-wrap .work > div.text-box {
+      margin-left: 70px;
+      padding-right: 20px; }
+      #work .con div.work-wrap .work > div.text-box > .title-con {
+        -webkit-box-align: end;
+            -ms-flex-align: end;
+                align-items: end; }
+        #work .con div.work-wrap .work > div.text-box > .title-con > .sub-title {
+          margin: 15px 0; }
+      #work .con div.work-wrap .work > div.text-box > p {
+        font-size: 1.8em;
+        line-height: 2em; }
+      #work .con div.work-wrap .work > div.text-box > .link-box {
+        margin: 50px 0; }
+        #work .con div.work-wrap .work > div.text-box > .link-box > a {
           min-width: 150px;
           padding: 0 20px;
           height: 45px;
@@ -883,8 +861,8 @@ section {
           transition: transform 0.3s, background 0.3s, color 0.3s;
           transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
           margin-right: 20px;
-          border: 2px solid #49FFA8;
-          color: #49FFA8;
+          border: 2px solid #FCFF52;
+          color: #FCFF52;
           font-weight: 700;
           display: -webkit-box;
           display: -ms-flexbox;
@@ -896,15 +874,50 @@ section {
               -ms-flex-pack: center;
                   justify-content: center;
           text-align: center; }
-          #work .con div.work-wrap .work > div.text-box > .link-box > a:nth-child(2n):hover {
+          #work .con div.work-wrap .work > div.text-box > .link-box > a:hover {
             -webkit-transform: scale(0.9);
                     transform: scale(0.9);
             color: #030303;
-            background-color: #49FFA8; }
+            background-color: #FCFF52; }
           @media (min-width: 2000px) {
-            #work .con div.work-wrap .work > div.text-box > .link-box > a:nth-child(2n) {
+            #work .con div.work-wrap .work > div.text-box > .link-box > a {
               min-width: 200px;
               height: 55px; } }
+          #work .con div.work-wrap .work > div.text-box > .link-box > a:nth-child(2n) {
+            min-width: 150px;
+            padding: 0 20px;
+            height: 45px;
+            font-size: 1.6em;
+            border-radius: 7px;
+            -webkit-transform: scale(1);
+                    transform: scale(1);
+            -webkit-transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
+            transition: background 0.3s, color 0.3s, -webkit-transform 0.3s;
+            transition: transform 0.3s, background 0.3s, color 0.3s;
+            transition: transform 0.3s, background 0.3s, color 0.3s, -webkit-transform 0.3s;
+            margin-right: 20px;
+            border: 2px solid #49FFA8;
+            color: #49FFA8;
+            font-weight: 700;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-align: center;
+                -ms-flex-align: center;
+                    align-items: center;
+            -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                    justify-content: center;
+            text-align: center; }
+            #work .con div.work-wrap .work > div.text-box > .link-box > a:nth-child(2n):hover {
+              -webkit-transform: scale(0.9);
+                      transform: scale(0.9);
+              color: #030303;
+              background-color: #49FFA8; }
+            @media (min-width: 2000px) {
+              #work .con div.work-wrap .work > div.text-box > .link-box > a:nth-child(2n) {
+                min-width: 200px;
+                height: 55px; } }
   #work .con .fp-controlArrow {
     opacity: 0.3;
     -webkit-transition: opacity 0.5s;
@@ -921,9 +934,12 @@ section {
       border-width: 20px 0 20px 14px;
       -webkit-animation: next-ani 0.7s ease-in-out 0s infinite alternate both;
               animation: next-ani 0.7s ease-in-out 0s infinite alternate both; }
-#work.active .con .work {
-  -webkit-animation: fade-up-transform 3s ease-in-out 0s 1 alternate both;
-          animation: fade-up-transform 3s ease-in-out 0s 1 alternate both; }
+#work.active .con div.work-wrap .work {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+  -webkit-animation: fade-up-transform 3s ease-in-out 0s 1 alternate backwards;
+          animation: fade-up-transform 3s ease-in-out 0s 1 alternate backwards; }
 
 #design div.con > ul.gallery {
   -ms-flex-wrap: wrap;
