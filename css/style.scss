@@ -244,7 +244,6 @@ img {
     font-size: 4em;
     font-weight: 700;
     font-style: italic;
-    // margin-right: 20px;
     line-height: 1.3em;
     word-break: keep-all;
 
@@ -355,7 +354,6 @@ img {
 
     transform: rotate(90deg);
     transform-origin: right bottom;
-    // transform: rotate(-90deg);
     white-space: nowrap;
 
 
@@ -448,12 +446,10 @@ img {
 #fp-nav ul li:hover a.active span,
 .fp-slidesNav ul li a.active span,
 .fp-slidesNav ul li:hover a.active span {
-    // background: $point-color-blue;
     opacity: 1;
 }
 
 #fp-nav ul li .fp-tooltip {
-    // color: $point-color-blue;
     font-weight: 600;
 }
 
@@ -467,7 +463,6 @@ img {
 html,
 body {
     font-size: 10px;
-    // min-width: 1920px;
     font-family: 'Open Sans', 'Noto Sans CJK KR', sans-serif;
     background: #030303;
     color: #F5F5F5;
@@ -519,27 +514,47 @@ section {
     & > .sns-btn{
         position: relative;
         align-self: center;
-        // align-items: flex-end;
-       padding: 0 20px;
-       margin-right: -20px;
 
         & > div.dot{
-            // align-items: flex-end;
-            flex-direction: column;
+
+            position: relative;
             pointer-events: none;
+            width: 20px;
+            height: 20px;
             
             & > span{
-                position: relative;
                 display: inline-block;
-                width: 3px;
-                height: 3px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+               transform-origin: center;
+                width: 2px;
+                height: 2px;
                 background: #fff;
                 border-radius: 100%;
-                margin-bottom: 3px;
-                
 
-                &:last-child{
+                &:first-child{
+                    top: 6px;
+                }
+
+                &:nth-child(3){
+                    top: 14px;
                     margin-bottom: 0;
+                    
+                }
+
+                &:nth-child(4){
+                    top:  6px;
+                }
+
+                &:nth-child(5){
+                    top:  14px;
+                }
+
+                &:nth-child(4), &:nth-child(5){
+                    opacity: 1;
+                    transition: opacity 0.3s, margin 0.3s;
                 }
             }
         }
@@ -565,6 +580,30 @@ section {
             }
     
     
+        }
+
+        &.active{
+            & > div.dot{
+                & > span{                   
+                    &:first-child{
+                        margin-left: -4px;
+                        
+                    }
+                    &:nth-child(3){
+                        margin-left:4px;
+                        
+                    }                
+                    &:nth-child(4){
+                        opacity: 1;
+                        margin-left: 4px;
+                    }
+                    &:nth-child(5){
+                        opacity: 1;
+                        margin-left: -4px;
+                    }
+
+                }
+            }
         }
     }
 
@@ -614,12 +653,7 @@ section {
                 min-width: 500px;
                 max-width: 500px;
                 height: auto;
-                // position: absolute;
-                // top: 50%;
-                // left: 50%;
-                // transform: translateX(-50%) translateY(-55%);
                 z-index: 3;
-                // box-shadow: 0px 0px 15px 5px rgba(0,0,0,0.5)
                 opacity: 1;
                 transition: min-width 0.3s, opacity 0.5s;
 
@@ -653,16 +687,7 @@ section {
                 &>h1 {
                     // 메인 타이틀
                     font-weight: 900;
-                    // position: absolute;
-                    // z-index: 1;
-                    // top: 55%;
-                    // left: 50%;
-                    // transform: translateX(-50%) translateY(0%);
-                    // visibility: hidden;
 
-                    // &>span.visible {
-                    //     visibility: visible;
-                    // }
 
                     &>span {
                         font-style: normal;
@@ -678,15 +703,14 @@ section {
 
                     &.title-back {
                         // 이미지보다 뒤쪽의 타이틀
-                        // left: 52%;
+
                         -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
-                        // opacity: 0.1;
+
                         position: absolute;
                         top: 10%;
                         z-index: 1;
                         animation: fade-up 3s ease-in-out 2s 1 alternate both;
                         color: transparent;
-                        // stroke: 1px solid rgba(255, 255, 255, 0.5);
                     }
 
                 }
@@ -699,11 +723,6 @@ section {
                     font-weight: 600;
                     letter-spacing: 1em;
                     transform: translateY(-10px);
-                    // position: absolute;
-                    // z-index: 4;
-                    // top: 65%;
-                    // left: 50%;
-                    // transform: translateX(-50%) translateY(0%);
                     animation: fade-up 5s ease-in-out 2.5s 1 alternate both;
                 }
 
@@ -822,12 +841,10 @@ section {
         &>div.text-box {
             margin-top: 50px;
 
-            // margin-right: 150px;
             &>p {
                 font-weight: 600;
                 font-size: 4em;
                 line-height: 1.5em;
-                // margin-bottom: 50px;
                 margin-right: 120px;
 
                 &>.icon {
@@ -892,7 +909,6 @@ section {
 
             &>ul.row {
 
-                // margin: 50px 0;
                 &>li.skill {
                     width: 50px;
                     margin: 0px 15px;
@@ -1002,8 +1018,6 @@ section {
                         align-items: end;
 
                         &>.sub-title {
-                            // font-size: 1.8em;
-                            // font-weight: 400;
                             margin: 15px 0;
                         }
                     }
@@ -1079,7 +1093,7 @@ section {
 
 #design {
 
-    // min-height: 100vh;
+
     & div.con {
         &>ul.gallery {
             flex-wrap: wrap;
@@ -1371,13 +1385,14 @@ footer {
         }
 
         & div.color{
-            & > ul.color-list{         
+            & > ul.color-list{     
+                flex-wrap: wrap;    
                 & > li.color{                    
                     width: 60px;
                     height: 60px;
                     border: 1px solid rgba(255,255,255,0.1);
-                    background-color: attr(data-color);
                     margin-right: 15px;
+                    margin-bottom: 15px;
                 }
             }
         }
@@ -1393,9 +1408,6 @@ footer {
             position: relative;
 
             &  .num{
-                // position: absolute;
-                // top: -60px;
-                // left: 0;
                 font-size: 2em;
                 font-weight: 700;
                 font-style: italic;
@@ -1710,8 +1722,6 @@ footer {
         max-width: $max-width;
         padding-left: 50px;
         padding-right: 50px;
-        //    padding-top: 200px !important;
-        //    padding-bottom: 200px !important;
     }
 
     // subPage start
@@ -1729,7 +1739,6 @@ footer {
 
         &#detail{
             margin: 180px 0;
-            // margin-top: 0;
             & .row{
                 flex-direction: column;
                 margin: 120px 0;
@@ -1788,36 +1797,7 @@ footer {
                 &>div.title {
 
                     font-size: 6em;
-                    letter-spacing: 0.07em;
-
-                    // & > h1{
-
-                    //     top: 50%;
-                    //     left: 47%;
-                    //     transform: translateX(-50%) translateY(0%);  
-
-                    //     &.title-front{               
-                    //     // 이미지보다 앞쪽의 타이틀
-
-                    //     }
-                    //     &.title-back{
-                    //         // 이미지보다 뒤쪽의 타이틀
-                    //         left: 52%;
-
-                    //     }
-
-                    // }
-
-
-
-                    // & > h2{
-                    //     // 서브 타이틀
-                    //     font-size: 0.19em;
-                    //     letter-spacing: 1.5em;
-                    //     top: 63%;
-                    //     left: 50%;
-                    //     transform: translateX(-50%) translateY(0%);  
-                    // }
+                    letter-spacing: 0.07em;                  
 
                 }
             }
@@ -1827,7 +1807,6 @@ footer {
 
 
 @media(max-width: 1024px) and (min-width: 769px) {
-    // and (orientation: portrait) 
     // iPad Pro
 
     // skill start
@@ -1960,8 +1939,6 @@ footer {
         font-size: 7em;
         top: -50px;
         left: 30px;
-        // transform-origin: 0% 100%;
-        // transform: translateX(-50%);
         transform: rotate(90deg);
         transform-origin: 0% 100%;
         right: unset;
@@ -2157,9 +2134,6 @@ footer {
     // design start
     #design {
         & div.con {
-            // padding-top: 200px;
-            // padding-bottom: 200px;
-
             &>ul.gallery {
                 order: 1;
 
@@ -2249,7 +2223,6 @@ footer {
                             text-align: center;
 
                             &>h3.site-title {
-                                // font-size: 3.2em;
                                 margin-top: 15px;
                             }
 
@@ -2361,10 +2334,6 @@ footer {
         height: auto !important;
     }
 
-    // html,body{
-    //     font-size: 8px;
-    // }
-
     // container
     .con {
         padding: 0 50px;
@@ -2383,14 +2352,10 @@ footer {
         position: relative;
         display: inline-block;
         font-size: 4em;
-        top: 0px;
-        // left: 50%;    
+        top: 0px;   
         left: 30px;
         bottom: unset;
-        // transform: rotate(90deg);
-        // transform: translateX(-50%);
         transform: none;
-
         transform-origin: left bottom;
 
         &::after {
@@ -2440,19 +2405,15 @@ footer {
             & ul.sns {
                 // sns menu
                 flex-direction: column;
-                // visibility: hidden;
                 position: absolute;
-                
                 left: 50%;
                 top: 27px;
                 transform: translateX(-50%);
-                // visibility: hidden;
-                // transition:  visibillity 0s 0s;
+
 
                 & > li{
                     margin: 3px 0;
                     transform: scale(0);
-                    // opacity: 0;
                     transform-origin: center;
                     transition: transform 0.3s, opacity 0.3s;
                     & > a{
@@ -2468,7 +2429,6 @@ footer {
                     transition: visibillity 0s 2s;
                     & > li{
                         transform: scale(1);
-                        // opacity: 1;
                         @for $i from 1 through 3{
 
                                 &:nth-child(#{$i}){
@@ -2495,13 +2455,9 @@ footer {
                     min-width: 280px;
                 }
 
-
                 &>div.title {
-
                     font-size: 4em;
                     letter-spacing: 0.07em;
-
-
 
                     &>h2 {
                         // 서브 타이틀
@@ -2548,7 +2504,6 @@ footer {
 
                     &>ul.career-list {
                         margin: 120px 0px 0px 15px;
-                        // margin-top: 150px;
                     }
                 }
 
@@ -2572,7 +2527,6 @@ footer {
 
                 &>ul.skill-description {
                     font-size: 1.4em;
-
                     &>li {
                         margin: 40px 0;
 
@@ -2617,7 +2571,6 @@ footer {
 
                     &>div.text-box {
                         // work description
-
                         & > p{
                             text-align: center;
                             font-size: 1.5em;
@@ -2626,7 +2579,6 @@ footer {
                         &>.title-con {
                             // title
                             &>h3.site-title {
-                                // font-size: 2.8em;
                                 margin-top: 15px;
                                 font-size: 3em;
                             }
@@ -2695,8 +2647,6 @@ footer {
         & div.con {
 
             &>ul.gallery {
-
-
                 &>li {
                     
                     width: 300px;
@@ -2845,9 +2795,7 @@ footer {
                 .text-con{
                     text-align: left;
                     margin-top: 50px;
-                    // & > .text-box{
-                    //     text-align: left;
-                    // }
+
                 }
 
                 &:nth-of-type(2){
@@ -2858,7 +2806,6 @@ footer {
 
                 &:nth-of-type(3){
                     .text-con{
-                    //    margin-bottom: 200px;
                     }
                 }
             }
@@ -3005,7 +2952,7 @@ footer {
     #work{
         .fp-slidesContainer{
             & > .fp-slide{
-                magrin-bottom: 200px;
+                margin-bottom: 200px;
             }
         }
     }
