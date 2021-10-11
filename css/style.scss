@@ -470,6 +470,10 @@ body {
     min-width: 280px;
 }
 
+html.on{
+    overflow-y: hidden !important;
+}
+
 
 section {
     min-height: 100vh;
@@ -1471,6 +1475,53 @@ footer {
 }
 
 // subPage end
+
+    // modal start
+    #gallery-modal{
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: fade-up-transform 2s ease-in-out 0s 1 alternate backwards;
+        // animation: name duration timing-function delay iteration-count direction fill-mode;
+
+        & > .modal{
+            width: 80%;     
+            position: relative;
+
+            & > .scrollable{
+                width: 100%;
+                // margin: 0 auto;
+                height: auto;
+                max-height: 50vh;
+                overflow-y: scroll;
+                background-color: #fff; 
+            }   
+
+            & > .close-btn{
+                cursor: pointer;
+                position: absolute;
+                right: 0;
+                top: -50px;
+                font-size: 3em;
+                opacity: 0.6;
+                transition: opacity 0.3s;
+               &:hover{
+                opacity: 1;
+               }
+            }
+            
+        }
+        
+    }
+    // modal end
+
 
 // responsive start
 
@@ -2812,6 +2863,7 @@ footer {
         }
     }
     // subPage end
+
 
 }
 

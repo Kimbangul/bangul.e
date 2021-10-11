@@ -31,9 +31,6 @@ $(document).ready(function () {
                         triggerHook: 0.5, //viewport에 대해 상대적으로 어느 시점에서 보여줄 건지를 설정
                         offset: 0,
                     })
-                    // .addIndicators({
-                    //     name:"section" + i
-                    //   })
                     .setClassToggle(revealElements[i], "active")
                     .addTo(controller); // 컨트롤러 등록                
             }
@@ -64,8 +61,47 @@ $(document).ready(function () {
 
     }
 
+    function galleryModal_init(){
+        const galleryThumb = document.querySelectorAll('#design .con > ul.gallery > li');
+        galleryThumb.forEach(function(el){            
+            el.addEventListener('click', function(e){              
+                e.preventDefault();
+                e.stopPropagation();
+                
+                const imgHref = e.target.parentElement.getAttribute('href'); // 이미지 속성값 가져오기
+                makeModal(imgHref);
+            });
+        });
+
+        // make modal
+        function makeModal(imgHref){
+            const targetEl = document.querySelector('body');             
+            const modal = document.createElement('div');
+
+            modal.setAttribute('id', 'gallery-modal'); // 생성한 엘리먼트에 id값 설정
+            modal.innerHTML = `<div class='img-box modal'><div class="scrollable"><img src='${imgHref}'></div><a class='close-btn'><i class="fas fa-times"></i></a></div>`;
+            
+            targetEl.append(modal); // 모달창 추가
+            $('html').addClass('on');
+
+            const createdModal = document.querySelector('#gallery-modal > .modal');
+            createdModal.children[1].addEventListener('click', function(e){
+                e.preventDefault(); 
+                delModal();
+            });
+        }
+
+        // delete modal
+        function delModal(){
+            const modal = document.querySelector('#gallery-modal');
+            modal.remove();
+            $('html').removeClass('on');
+        }
+       
+    }
+
     scrollMagic_init();
     fullpage_init();
-
+    galleryModal_init();
 
 });
