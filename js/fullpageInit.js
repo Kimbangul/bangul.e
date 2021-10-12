@@ -47,18 +47,12 @@ $(document).ready(function () {
 
         enquire.register("all and (max-width: 999px)", {
             match : function() {
-                console.log('scrollMagic init');
                 makeScrollMagic();
             },
             unmatch : function() {
-                console.log('scrollMagic destory');
                 destoryScrollMagic();
             }
     });
-
-
-
-
     }
 
     function galleryModal_init(){
@@ -83,12 +77,21 @@ $(document).ready(function () {
             
             targetEl.append(modal); // 모달창 추가
             $('html').addClass('on');
+            $.fn.fullpage.setAllowScrolling(false);
 
             const createdModal = document.querySelector('#gallery-modal > .modal');
             createdModal.children[1].addEventListener('click', function(e){
                 e.preventDefault(); 
                 delModal();
             });
+
+
+            $('#gallery-modal').click(function(e){
+                console.log(e.target, e.currentTarget);
+                if(e.target === e.currentTarget){
+                    delModal();
+                }
+            })
         }
 
         // delete modal
@@ -96,7 +99,9 @@ $(document).ready(function () {
             const modal = document.querySelector('#gallery-modal');
             modal.remove();
             $('html').removeClass('on');
+            $.fn.fullpage.setAllowScrolling(true);
         }
+
        
     }
 

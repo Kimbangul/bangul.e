@@ -430,11 +430,11 @@ section {
   min-height: 100vh; }
 
 ::-webkit-scrollbar {
-  width: 6px; }
+  width: 10px; }
 
 ::-webkit-scrollbar-thumb {
   background-color: #49FFA8;
-  border-radius: 3px; }
+  border-radius: 5px; }
 
 ::-webkit-scrollbar-track {
   background: #4E4C4C; }
@@ -1362,12 +1362,13 @@ footer {
           animation: fade-up-transform 2s ease-in-out 0s 1 alternate backwards; }
   #gallery-modal > .modal {
     width: 80%;
-    position: relative; }
+    position: relative;
+    max-width: 700px; }
     #gallery-modal > .modal > .scrollable {
       width: 100%;
       height: auto;
       max-height: 50vh;
-      overflow-y: scroll;
+      overflow-y: auto;
       background-color: #fff; }
     #gallery-modal > .modal > .close-btn {
       cursor: pointer;

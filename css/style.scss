@@ -481,12 +481,12 @@ section {
 }
 
 ::-webkit-scrollbar {
-    width: 6px;
+    width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: $point-color-blue;
-    border-radius: 3px;
+    border-radius: 5px;
 
 }
 
@@ -1482,6 +1482,7 @@ footer {
         z-index: 1000;
         top: 0;
         left: 0;
+        
         width: 100vw;
         height: 100vh;
         background-color: rgba(0,0,0,0.7);
@@ -1494,13 +1495,13 @@ footer {
         & > .modal{
             width: 80%;     
             position: relative;
-
+            max-width: 700px;
             & > .scrollable{
                 width: 100%;
                 // margin: 0 auto;
                 height: auto;
                 max-height: 50vh;
-                overflow-y: scroll;
+                overflow-y:auto;
                 background-color: #fff; 
             }   
 
