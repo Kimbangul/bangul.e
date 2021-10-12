@@ -57,13 +57,16 @@ $(document).ready(function () {
 
     function galleryModal_init(){
         const galleryThumb = document.querySelectorAll('#design .con > ul.gallery > li');
-        galleryThumb.forEach(function(el){            
-            el.addEventListener('click', function(e){              
-                e.preventDefault();
-                e.stopPropagation();
-                
-                const imgHref = e.target.parentElement.getAttribute('href'); // 이미지 속성값 가져오기
-                makeModal(imgHref);
+        galleryThumb.forEach(function(el, idx){            
+            el.addEventListener('click', function(e){ 
+                console.log(idx);    
+                if (idx !== 3 && idx !== 8){
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const imgHref = e.target.parentElement.getAttribute('href'); // 이미지 속성값 가져오기
+                    makeModal(imgHref);
+                }
             });
         });
 

@@ -653,9 +653,9 @@ section {
             //  메인 이미지
             &>div.main-img {
                 position: relative;
-                width: 30%;
+                width: 40%;
                 min-width: 500px;
-                max-width: 500px;
+                max-width: 550px;
                 height: auto;
                 z-index: 3;
                 opacity: 1;
@@ -673,17 +673,20 @@ section {
                 }
             }
 
-            &>div.title {
+            & div.title {
 
-                font-size: 7.5em;
-                letter-spacing: 0.18em;
+                font-size: 5.5em;
+                letter-spacing: 0.18em;                
                 font-style: italic;
                 color: #fff;
                 white-space: nowrap;
                 opacity: 1;
                 transition: font-size 0.3s, opacity 0.5s;
                 position: absolute;
-                top: 55%;
+                // top: 60%;
+                left: 50%;
+                bottom: 10%;
+                transform: translateX(-50%);
                 z-index: 5;
 
 
@@ -691,6 +694,7 @@ section {
                 &>h1 {
                     // 메인 타이틀
                     font-weight: 900;
+                    line-height: 1.25em;
 
 
                     &>span {
@@ -698,9 +702,10 @@ section {
                     }
 
                     &.title-front {
-                        // 이미지보다 앞쪽의 타이틀                     
+                        // 이미지보다 앞쪽의 타이틀      
+                                      
                         z-index: 4;
-                        animation: fade-up 3s ease-in-out 1.5s 1 alternate both;
+                        animation: fade-up-transform 3s ease-in-out 1.5s 1 alternate both;
 
 
                     }
@@ -713,7 +718,7 @@ section {
                         position: absolute;
                         top: 10%;
                         z-index: 1;
-                        animation: fade-up 3s ease-in-out 2s 1 alternate both;
+                        animation: fade-up-transform 3s ease-in-out 2s 1 alternate both;
                         color: transparent;
                     }
 
@@ -727,7 +732,7 @@ section {
                     font-weight: 600;
                     letter-spacing: 1em;
                     transform: translateY(-10px);
-                    animation: fade-up 5s ease-in-out 2.5s 1 alternate both;
+                    animation: fade-up-transform 5s ease-in-out 2.5s 1 alternate both;
                 }
 
             }
@@ -742,8 +747,10 @@ section {
 
 // about me start
 #about-me {
-    & div.con {
+    & div.con {        
+
         &>div.text-box {
+            width: 100%;
             &>.pr {
                 line-height: 1.6em;
                 font-size: 3em;
@@ -753,7 +760,7 @@ section {
                 }
             }
 
-            &>div.introduction {
+            & div.introduction {
                 margin-top: 30px;
                 font-weight: 300;
         
@@ -785,29 +792,48 @@ section {
                     }
                 }
 
-                &>ul.career-list {
-                    font-size: 1.4em;
-                    opacity: 0;
-                    transition: opacity 0.3s 0s;
+                
+            }
 
-                    &>li {
-                        margin: 10px 0;
-                        list-style: disc;
-
-                        &::before {
-                            display: inline-block;
-                        }
-                    }
-
+            & > .wrap{
+                position: relative;
+            }
+            
+            & .img-box{
+                // position: absolute;
+                display: flex;
+                // padding-left: 0px;
+                flex-grow: 1;
+                margin-bottom: 130px;
+                justify-content: center;
+                // margin: 0 0 150px 150px;
+                & > img{
+                    max-width: 300px;
                 }
             }
+        }
+
+        & ul.career-list {
+            font-size: 1.4em;
+            opacity: 0;
+            transition: opacity 0.3s 0s;
+
+            &>li {
+                margin: 10px 0;
+                list-style: disc;
+
+                &::before {
+                    display: inline-block;
+                }
+            }
+
         }
     }
 
     &.active {
         & div.con {
             &>div.text-box {
-                &>div.introduction {
+                & div.introduction {
                     &>p {
                         animation: fade-up-transform 3s ease-in-out 0s 1 alternate backwards;
                         opacity: 1;
@@ -825,11 +851,12 @@ section {
                         transition: opacity 0.3s 2s;
                     }
 
-                    &>ul.career-list {
-                        opacity: 1;
-                        transition: opacity 0.5s 2.5s;
-                    }
+                    
                 }
+            }
+            & ul.career-list {
+                opacity: 1;
+                transition: opacity 0.5s 2.5s;
             }
         }
     }
@@ -1103,10 +1130,10 @@ section {
             flex-wrap: wrap;
 
             &>li {
-                width: 225px;
-                height: 225px;
+                width: 200px;
+                height: 200px;
                 border: 1px solid rgba(255, 255, 255, 0.4);
-                margin: 20px 20px;
+                margin: 15px 15px;
                 position: relative;
                 overflow: hidden;
                 transform: scale(0);
@@ -1188,7 +1215,7 @@ section {
     }
 }
 
-@for $i from 1 through 8 {
+@for $i from 1 through 10 {
     #design.active {
         & div.con {
             &>ul.gallery {
@@ -1495,7 +1522,7 @@ footer {
         & > .modal{
             width: 80%;     
             position: relative;
-            max-width: 700px;
+            max-width: 1000px;
             & > .scrollable{
                 width: 100%;
                 // margin: 0 auto;
@@ -1539,7 +1566,7 @@ footer {
     #about-me{
         & div.con{
             & > div.text-box{
-                & > div.introduction{
+                & div.introduction{
                     margin-top: 40px;
                     & > p{
                         margin-bottom: 40px;
@@ -1551,10 +1578,18 @@ footer {
                         margin-bottom: 70px;
                     }
 
-                    & > ul.career-list{
-                        font-size: 1.5em;
-                    }
+                    
                 }
+
+                & .img-box{
+                    & > img{
+                        max-width: 350px;
+                    }
+                    
+                }
+            }
+            &  ul.career-list{
+                font-size: 1.5em;
             }
         }
     }
@@ -1670,13 +1705,23 @@ footer {
                         font-size: 2.8em;
                     }
     
-                    & > div.introduction{
+                    & div.introduction{
                         & > p{
                             font-size: 1.6em;
                             line-height: 1.8em;
                         }
                     }
+
+                    & .img-box{
+                        & > img{
+                            max-width: 280px;
+                        }
+                        // max-width: 200px;
+                        // margin: 0 0 100px 100px;
+                    }
                 }
+
+                
             }
         }
         // about me end
@@ -1776,6 +1821,19 @@ footer {
         padding-right: 50px;
     }
 
+    #design{
+        & div.con{
+            & > ul.gallery{
+                order: 1;
+            }
+
+            & > p{
+                margin-top: 0;
+                margin-bottom: 50px;
+            }
+        }
+    }
+
     // subPage start
 
     .sub-section{
@@ -1836,6 +1894,18 @@ footer {
     // subPage end
 }
 
+@media(max-width: 1200px){
+    #about-me {
+        & div.con{
+            & > div.text-box{
+                & .img-box{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @media(max-width: 1080px) {
     #main {
         &>div.fp-tableCell {
@@ -1846,10 +1916,10 @@ footer {
                     min-width: 480px;
                 }
 
-                &>div.title {
+                & div.title {
 
                     font-size: 6em;
-                    letter-spacing: 0.07em;                  
+                    letter-spacing: 0.18em;                  
 
                 }
             }
@@ -2011,6 +2081,24 @@ footer {
         & .section-title {
             top: -100px;
         }
+
+        & div.con{
+            & > div.text-box{
+
+                & div.introduction{
+                    order: 2;
+                    // margin-top: 0;
+                }
+
+                & > div.wrap{
+                    flex-direction: column;
+                }
+                & .img-box{
+                    display: flex;
+                    margin: 50px 0 60px 0;
+                }
+            }
+        }
     }
 
     #work {
@@ -2091,19 +2179,20 @@ footer {
                     }
                 }
 
-                &>div.introduction {
+                & div.introduction {
                     &>p {
                         font-size: 1.5em;
                     }
 
-                    &>ul.career-list {
-                        font-size: 1.3em;
-                    }
+                    
 
                     &>div.link-box {
                         margin-bottom: 70px;
                     }
                 }
+            }
+            & ul.career-list {
+                font-size: 1.3em;
             }
         }
     }
@@ -2345,16 +2434,16 @@ footer {
                     min-width: 320px;
                 }
 
-                &>div.title {
+                & div.title {
 
-                    font-size: 5em;
-                    letter-spacing: 0.07em;
+                    font-size:3.7em;
+                    letter-spacing: 0.2em;
 
 
                     &>h2 {
                         // 서브 타이틀
                         font-size: 0.19em;
-                        letter-spacing: 1.5em;
+                        
 
                     }
 
@@ -2507,13 +2596,17 @@ footer {
                     min-width: 280px;
                 }
 
-                &>div.title {
-                    font-size: 4em;
-                    letter-spacing: 0.07em;
+                & div.title {
+                    font-size: 3.5em;
+                    // letter-spacing: 0.07em;
+
+                    & > h1{
+                        line-height: 1.2em;
+                    }
 
                     &>h2 {
                         // 서브 타이틀
-                        font-size: 0.15em;
+                        font-size: 0.08em;
                         letter-spacing: 1.5em;
 
                     }
@@ -2533,6 +2626,10 @@ footer {
         & div.con {
             &>div.text-box {
 
+                & .img-box{
+                    margin: 50px 0 70px 0;
+                }
+
                 &>.pr {
                     line-height: 1.25em;
 
@@ -2541,8 +2638,8 @@ footer {
                     }
                 }
 
-                &>div.introduction {
-                    margin-top: 50px;
+                & div.introduction {
+                    margin-top: 0px;
                     line-height: 2.6em;
 
                     &>p {
@@ -2554,11 +2651,12 @@ footer {
                         }
                     }
 
-                    &>ul.career-list {
-                        margin: 120px 0px 0px 15px;
-                    }
+                    
                 }
 
+            }
+            & ul.career-list {
+                margin: 120px 0px 0px 15px;
             }
         }
 
@@ -2880,23 +2978,35 @@ footer {
                 }
 
 
-                &>div.title {
+                & div.title {
 
-                    font-size: 3.5em;
-                    letter-spacing: 0.07em;
+                    font-size: 3em;
+                    letter-spacing: 0.1em;
 
 
 
                     &>h2 {
                         // 서브 타이틀
                         font-size: 0.15em;
-                        letter-spacing: 1.5em;
+                        letter-spacing: 0.8em;
   
                     }
 
                 }
 
 
+            }
+        }
+    }
+
+    #about-me{
+        & div.con{
+            & > div.text-box{
+                & .img-box{
+                    & > img{
+                        max-width: 230px;
+                    }
+                }
             }
         }
     }
@@ -2930,6 +3040,18 @@ footer {
 
     .con {
         padding: 0 35px;
+    }
+
+    #about-me{
+        & div.con{
+            & > div.text-box{
+                & .img-box{
+                    & > img{
+                        max-width: 200px;
+                    }
+                }
+            }
+        }
     }
 
     #design {
@@ -2976,7 +3098,7 @@ footer {
     #about-me{
         & div.con{
             & > div.text-box{
-                & > div.introduction{
+                &  div.introduction{
                     & > div.link-box{
                         margin-bottom: 50px;
                     }
