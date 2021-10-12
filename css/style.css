@@ -1405,7 +1405,7 @@ footer {
     #gallery-modal > .modal > .scrollable {
       width: 100%;
       height: auto;
-      max-height: 50vh;
+      max-height: 70vh;
       overflow-y: auto;
       background-color: #fff; }
     #gallery-modal > .modal > .close-btn {
@@ -2196,5 +2196,4 @@ footer {
 @media (max-width: 280px) {
   html, body {
     overflow-x: scroll; } }
-
 /*# sourceMappingURL=style.css.map */
