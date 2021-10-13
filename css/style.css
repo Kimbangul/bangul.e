@@ -1705,6 +1705,9 @@ footer {
   #contact .section-title {
     top: 70px; } }
 @media (max-width: 900px) {
+  #about-me div.con > div.text-box div.introduction > p {
+    text-align: justify; }
+
   #work .con div.work-wrap .work > div.img-box {
     max-width: 400px; }
   #work .con div.work-wrap .work > div.text-box {
@@ -2196,4 +2199,5 @@ footer {
 @media (max-width: 280px) {
   html, body {
     overflow-x: scroll; } }
+
 /*# sourceMappingURL=style.css.map */

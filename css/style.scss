@@ -2137,6 +2137,20 @@ footer {
 }
 
 @media(max-width: 900px) {
+
+    #about-me{
+        & div.con{
+            & > div.text-box{
+                &  div.introduction{
+                    & > p{
+                        text-align: justify;
+                    }
+                }
+            }
+        }
+    }
+
+
     #work {
         & .con {
             & div.work-wrap {
@@ -2147,6 +2161,9 @@ footer {
 
                     &>div.text-box {
                         margin-top: 30px;
+                        & > p{
+                            // text-align: justify;
+                        }
                     }
                 }
             }
