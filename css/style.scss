@@ -1820,6 +1820,103 @@ footer {
     // subPage end
 }
 
+@media (max-width: 1300px){
+
+    .con{
+        max-width: 1000px;
+    }
+
+    #main {
+        & > div.fp-tableCell{
+            & div.con{
+                & > div.main-img{
+                    min-width: 350px;
+                    max-width: 400px;
+                }
+            }
+        }
+        
+    }
+
+    #about-me {
+        div.con{
+            & div.text-box{
+                & > .pr{
+
+                }
+            }
+        }
+    } 
+}
+
+@media (max-width: 1300px) and (min-width: 1000px){
+    #about-me{
+        & div.con{
+
+            & > div.text-box{
+                & .img-box{
+                    & > img{
+                        max-width: 200px;
+                    }
+                }
+
+                & div.introduction{
+                    & > div.link-box{
+                        margin-bottom: 0;
+                    }
+                }
+            }
+            ul.career-list{
+                display: none;
+            }
+        } 
+    }
+
+    #work {
+        .tag-list{
+            margin: 20px 0 35px 0;
+        }
+
+        & .con{
+            & div.work-wrap{
+                & .work{
+
+                    & > div.text-box{
+                        & > .title-con{
+                            & > .sub-title{
+                                margin: 12px 0;
+                            }
+                        }
+                        & > .link-box{
+                            margin-top: 45px;
+                            margin-bottom: 0;
+                        }
+                    }
+                    & > div.img-box{
+                        padding: 10px;
+                        // margin-left: 0;
+                    }
+                }
+            }
+        }
+    } 
+
+    #design{
+        & div.con{
+            min-height: 100vh;
+            justify-content: center;
+
+            & > ul.gallery{
+                & > li{
+                    width: 180px;
+                    height: 180px;
+                    margin: 10px 7px;
+                }
+            }
+        }
+    }
+}
+
 
 @media(max-width: 1200px) {
     $max-width: 768px;
@@ -2025,6 +2122,7 @@ footer {
             &>div.text-box {
                 &>p {
                     font-size: 1.8em;
+                    margin-bottom: 40px;
 
                     &:first-child {
                         margin-bottom: 70px;
@@ -2110,6 +2208,22 @@ footer {
         }
     }
 
+    #skills{
+        & div.con{
+            & > div.skill-list{
+                & >ul.row{
+                    flex-wrap: wrap;
+
+                    & > li.skill{
+                        margin: 0px 30px;
+                        margin-bottom: 20px;
+                        
+                    }
+                }
+            }
+        }
+    }
+
     #work {
         & .section-title {
             left: 50%;
@@ -2190,6 +2304,21 @@ footer {
     .con {
         padding: 0 100px;
     }
+
+    // main start
+    #main {
+        & > div.fp-tableCell{
+            & div.con{
+
+                & div.title{
+                    font-size: 4.5em;
+                }
+                & > div.main-img{
+                    min-width: 350px;
+                }
+            }
+        }
+    } > div.fp-tableCell div.con > div.main-img
 
     // about me start
     #about-me {
@@ -2319,6 +2448,21 @@ footer {
     }
 
     // design end
+    // conatct start
+    #contact {
+        & div.con{
+            & > div.text-box{
+                & > p{
+                    margin-bottom: 40px;
+                    &:first-child{
+                        font-size: 2.5em;
+                        margin-bottom: 40px;
+                    }
+                }
+            }
+        }
+    } 
+    //contact end
     // footer start
 
     footer {
@@ -3119,6 +3263,16 @@ footer {
 @media(max-width: 300px){
     body,html{
         font-size: 8px;
+    }
+
+    #main{
+        & > div.fptableCell {
+            & div.con{
+                & > div.main-img{
+                    min-width: 200px;;
+                }
+            }
+        }
     }
 
     #about-me{

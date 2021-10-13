@@ -1517,6 +1517,40 @@ footer {
 
   .sub-section#detail .row .img-box.mb-img {
     margin-left: 170px; } }
+@media (max-width: 1300px) {
+  .con {
+    max-width: 1000px; }
+
+  #main > div.fp-tableCell div.con > div.main-img {
+    min-width: 350px;
+    max-width: 400px; } }
+@media (max-width: 1300px) and (min-width: 1000px) {
+  #about-me div.con > div.text-box .img-box > img {
+    max-width: 200px; }
+  #about-me div.con > div.text-box div.introduction > div.link-box {
+    margin-bottom: 0; }
+  #about-me div.con ul.career-list {
+    display: none; }
+
+  #work .tag-list {
+    margin: 20px 0 35px 0; }
+  #work .con div.work-wrap .work > div.text-box > .title-con > .sub-title {
+    margin: 12px 0; }
+  #work .con div.work-wrap .work > div.text-box > .link-box {
+    margin-top: 45px;
+    margin-bottom: 0; }
+  #work .con div.work-wrap .work > div.img-box {
+    padding: 10px; }
+
+  #design div.con {
+    min-height: 100vh;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    #design div.con > ul.gallery > li {
+      width: 180px;
+      height: 180px;
+      margin: 10px 7px; } }
 @media (max-width: 1200px) {
   .con {
     max-width: 768px;
@@ -1639,7 +1673,8 @@ footer {
       right: 50px; }
 
   #contact div.con > div.text-box > p {
-    font-size: 1.8em; }
+    font-size: 1.8em;
+    margin-bottom: 40px; }
     #contact div.con > div.text-box > p:first-child {
       margin-bottom: 70px; }
 
@@ -1690,6 +1725,13 @@ footer {
     display: flex;
     margin: 50px 0 60px 0; }
 
+  #skills div.con > div.skill-list > ul.row {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; }
+    #skills div.con > div.skill-list > ul.row > li.skill {
+      margin: 0px 30px;
+      margin-bottom: 20px; }
+
   #work .section-title {
     left: 50%;
     top: -150px;
@@ -1722,15 +1764,25 @@ footer {
   .con {
     padding: 0 100px; }
 
+  #main > div.fp-tableCell div.con div.title {
+    font-size: 4.5em; }
+  #main > div.fp-tableCell div.con > div.main-img {
+    min-width: 350px; }
+
+  > div.fp-tableCell div.con > div.main-img
   #about-me div.con > div.text-box > .pr {
     font-size: 2.9em;
     line-height: 1.4em; }
+    > div.fp-tableCell div.con > div.main-img
     #about-me div.con > div.text-box > .pr > .bold {
       font-size: 1.5em; }
+  > div.fp-tableCell div.con > div.main-img
   #about-me div.con > div.text-box div.introduction > p {
     font-size: 1.5em; }
+  > div.fp-tableCell div.con > div.main-img
   #about-me div.con > div.text-box div.introduction > div.link-box {
     margin-bottom: 70px; }
+  > div.fp-tableCell div.con > div.main-img
   #about-me div.con ul.career-list {
     font-size: 1.3em; }
 
@@ -1787,6 +1839,12 @@ footer {
             order: 0;
     margin: 0 0 70px 0;
     font-size: 3em; }
+
+  #contact div.con > div.text-box > p {
+    margin-bottom: 40px; }
+    #contact div.con > div.text-box > p:first-child {
+      font-size: 2.5em;
+      margin-bottom: 40px; }
 
   footer div.text-box {
     font-size: 1.4em;
@@ -2182,6 +2240,9 @@ footer {
 @media (max-width: 300px) {
   body, html {
     font-size: 8px; }
+
+  #main > div.fptableCell div.con > div.main-img {
+    min-width: 200px; }
 
   #about-me div.con > div.text-box div.introduction > div.link-box {
     margin-bottom: 50px; }

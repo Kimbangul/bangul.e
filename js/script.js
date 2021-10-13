@@ -1,7 +1,5 @@
 $(document).ready(function () {
 
-
-
     function mbNav_init() {
         const $mbNav = $('#main-header > .sns-btn');
         const $mbNavList = $mbNav.find('li > a');
