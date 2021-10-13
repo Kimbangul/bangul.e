@@ -13,6 +13,7 @@ $(document).ready(function () {
             scrollingSpeed: 1000,
             scrollOverflow: true,
             responsiveWidth: 1000, //1000px 이하에서 fullpage 해제
+            anchors: ['mainPage', 'profilePage', 'skillPage', 'workPage', 'designPage', 'contactPage']
 
         });
 
