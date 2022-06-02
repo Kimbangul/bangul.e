@@ -523,8 +523,8 @@ section {
 
             position: relative;
             pointer-events: none;
-            width: 20px;
-            height: 20px;
+            width: 16px;
+            height: 16px;
             
             & > span{
                 display: inline-block;
@@ -533,42 +533,40 @@ section {
                 left: 50%;
                 transform: translate(-50%, -50%);
                transform-origin: center;
-                width: 2px;
-                height: 2px;
+                width: 3px;
+                height: 3px;
                 background: #fff;
                 border-radius: 100%;
 
                 &:first-child{
-                    top: 6px;
+                    top: 0px;
                 }
 
                 &:nth-child(3){
-                    top: 14px;
+                    top: 16px;
                     margin-bottom: 0;
                     
                 }
 
                 &:nth-child(4){
-                    top:  6px;
+                    top:  0px;
                 }
 
                 &:nth-child(5){
-                    top:  14px;
+                    top:  16px;
                 }
 
                 &:nth-child(4), &:nth-child(5){
-                    opacity: 1;
+                    opacity: 0;
                     transition: opacity 0.3s, margin 0.3s;
                 }
             }
         }
         
-        & ul.sns {
-            
-            &>li {
-               
+        & ul.sns {            
+            &>li {               
                 &>a {
-                    font-size: 0.8em;
+                    font-size: 1em;
                     padding: 0 10px;
                     opacity: 1;
                     transition: color 0.3s;
@@ -590,20 +588,20 @@ section {
             & > div.dot{
                 & > span{                   
                     &:first-child{
-                        margin-left: -4px;
+                        margin-left: -8px;
                         
                     }
                     &:nth-child(3){
-                        margin-left:4px;
+                        margin-left:8px;
                         
                     }                
                     &:nth-child(4){
                         opacity: 1;
-                        margin-left: 4px;
+                        margin-left: 8px;
                     }
                     &:nth-child(5){
                         opacity: 1;
-                        margin-left: -4px;
+                        margin-left: -8px;
                     }
 
                 }
@@ -2718,7 +2716,7 @@ footer {
                 flex-direction: column;
                 position: absolute;
                 left: 50%;
-                top: 27px;
+                top: 30px;
                 transform: translateX(-50%);
 
 
